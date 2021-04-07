@@ -1,0 +1,47 @@
+.anime-card{
+    margin:1px;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px 3px black;
+}
+
+h4 {
+    
+    margin-bottom: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    font-size: 0.8em;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+    width: 100%;
+}
+
+// .cards{
+//     display: flex;
+
+// }
+
+.card{
+    display: flex;
+}
+
+.cards-grid{
+    display: grid;
+    margin: 40px;
+    align-items: center;
+    width: calc(100% - 100px);
+    justify-content: center;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(4, 160px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+body{
+    display:flex;
+}

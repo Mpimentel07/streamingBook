@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.header-menu {
+    /*Configurações do Header*/
+    color: lime;
+    font-size: 14px;
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    height: 350px;
+
+    /*Background settings*/
+    background-image: url('https://images3.alphacoders.com/574/thumb-1920-57497.jpg');
+    border-bottom:solid 3px green;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position-y: -165px;
+
+    /*flexbox settings*/
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+
+.menu {
+    margin: 10px 0 0 0px;
+    font-size: 20px;
+    flex-grow: 20;  
+    padding: 0 150px;
+
+    
+}
+/*CSS FOR PAGE HEADER*/
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    align-items: baseline;
+    justify-content: space-evenly;
+    text-shadow: 0.01em 0.1em 0.001em black;
+    margin: 0;
+    padding:0;    
+    cursor: pointer;
+}
+
+.menu li{
+    margin:0;
+    padding:0;
+}
+
+
+aside {
+    display: flex;
+    width: 400px;
+    padding: 5px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.botao {
+    color:white;    
+    // background: green;
+    border-radius: 30px;
+    padding: 8px 30px;
+    margin-right: 10px;
+    border:solid 2px transparent;
+    cursor: pointer;
+    text-shadow: 0.01em 0.1em 0.001em black;
+    
+}
+
+.botao:hover{
+    // border:solid 2px green;
+    color: green;
+}
+
+.signup:hover{    
+    // border:solid 2px red;
+    color: red;
+}
+
+.anime-name{
+    padding: 15px;  
+    color: black;
+    background-color: white;
+    border: solid 3px green;
+    border-bottom: none;
+    border-radius: 10px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: -5px;
+    margin-right: 100px;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.anime-name:hover{
+    text-decoration: underline;
+}
+
+/*CSS FOR PAGE CONTENT*/
+
+
+// li:hover:nth-child(1){
+//     color: mediumseagreen;
+// }
+
+// li:hover:nth-child(2){
+//     color: royalblue;
+// }
+
+// li:hover:nth-child(3){
+//     color: cadetblue;
+// }
+
+// li:hover:nth-child(4){
+//     color: mediumturquoise;
+// }
+
+
+
+
+
+
+
+/* "Asap","Droid Sans",Verdana,Tahoma,"DejaVu Sans",sans-serif;*/

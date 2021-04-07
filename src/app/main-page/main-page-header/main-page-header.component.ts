@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageHeaderComponent implements OnInit {
 
+  headerMenu = ['Anime Ranking', 'Seasonal Anime', 'Discord', 'Help']
+
   constructor() { }
 
   ngOnInit(): void {
+
+   
   }
 
 }

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "streamingBook"
+    }
+  },
+  "defaultProject": "streamingBook",
+  "cli": {
+    "analytics": false
+  }
 }
