@@ -1,33 +1,7 @@
-.anime-card{
-    margin:1px;
-    background-repeat: no-repeat;
-    background-size: 120%;
-    text-transform: uppercase;
-    cursor: pointer;
-    box-shadow: 10px 10px 10px 3px black;
-}
-
-h4 {
-    
-    margin-bottom: 1px;
+body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    padding: 10px;
-    color: white;
-    font-size: 0.8em;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 2;
-    width: 100%;
-}
-
-// .cards{
-//     display: flex;
-
-// }
-
-.card{
-    display: flex;
+    display:flex;
+    align-content: center;
 }
 
 .cards-grid{
@@ -42,6 +16,45 @@ h4 {
     grid-row-gap: 20px;
 }
 
-body{
-    display:flex;
+.card{
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    height: 160px;
+    width: 300px;
+    overflow: hidden;
+
 }
+.card:hover{
+    box-shadow: 10px 10px 10px 3px black;
+    
+}
+.card:hover>img{
+    width: 320px;
+}
+
+
+
+//NOTA: UM ELEMENTO PAI RELATIVE E UM ELEMENTO FILHO ABSOLUTE, O ABSOLUTE
+//SE COMPORTARÁ DE FORMA ABSOLUTA LEVANDO EM CONTA O ELEMENTO PAI
+
+h4 {
+    //Posicionamento
+    position: absolute;
+    margin:0;
+    bottom: 0;
+    padding: 10px 0 10px 10px;
+    //Texto
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 0.8em;
+    //Efeito
+    background-color: black;
+    opacity: 0.7;
+    //Largura
+    width: 97%;
+}
+
+
+

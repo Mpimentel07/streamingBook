@@ -2,14 +2,9 @@
     display: grid;
     margin: 0;
     grid-template-rows: 350px 4fr 0.5fr;
+    max-width: fit-content;
+
 }
 
-.header-menu{
-    display: flex;
-}
 
 
-.page-content{
-     display: flex;
-     padding: 10px;
- }

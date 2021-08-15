@@ -3,104 +3,136 @@
 }
 
 
-.header-menu {
+
+.general-header {
     /*Configurações do Header*/
-    color: lime;
-    font-size: 14px;
-    display: flex;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 900;
+    position: relative;
+    // display: flex;
     height: 350px;
-
     /*Background settings*/
-    background-image: url('https://images3.alphacoders.com/574/thumb-1920-57497.jpg');
-    border-bottom:solid 3px green;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 105%;
-    background-position-y: -165px;
-
+    // background-image: url('https://images3.alphacoders.com/574/thumb-1920-57497.jpg');
+    // border-bottom:solid 3px green;
+    // background-position: center;
+    // background-repeat: no-repeat; 
+    // background-size: auto auto;
+    // background-position-y: -165px;
     /*flexbox settings*/
-    flex-flow: row wrap;
-    justify-content: flex-end;
+
 }
 
+.general-header img{
+    z-index: -1;
+    width: 100vw;
+    height: 55vh;
+}
 
-.menu {
-    margin: 10px 0 0 0px;
-    font-size: 20px;
-    flex-grow: 20;  
-    padding: 0 150px;
-
+.header-menu{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    background-image: linear-gradient(#66b360, transparent);
     
+    top: 0;
+    font-size: 1.2em;
+    color: #FFF;
+    padding: 10px 50px;
+    text-shadow: #444 1px 1px 0;
+    flex-flow: row wrap;
+    // align-content: flex-start;
 }
+
+
 /*CSS FOR PAGE HEADER*/
+.menu {
+    font-weight: 900;    
+    flex-grow: 10;  
+    padding: 0 10px 0 10px;
+}
 
 .menu ul{
     display: flex;
     list-style: none;
     align-items: baseline;
     justify-content: space-evenly;
-    text-shadow: 0.01em 0.1em 0.001em black;
     margin: 0;
     padding:0;    
     cursor: pointer;
 }
 
-.menu li{
-    margin:0;
-    padding:0;
-}
 
-
+// .menu li{
+    //     margin:0;
+    //     padding:0;
+    // }
+    
+    
 aside {
     display: flex;
-    width: 400px;
     padding: 5px;
-    justify-content: flex-end;
-    margin-top: 20px;
+    // justify-content: flex-end;
+    // margin-top: 20px;
 }
 
 .botao {
-    color:white;    
-    // background: green;
-    border-radius: 30px;
-    padding: 8px 30px;
-    margin-right: 10px;
-    border:solid 2px transparent;
+    padding: 5px 10px;
     cursor: pointer;
-    text-shadow: 0.01em 0.1em 0.001em black;
+    
+}
+    
+.botao:hover, .menu li:hover{
+        text-shadow: 0.01em 0.1em 0.001em black;
     
 }
 
-.botao:hover{
-    // border:solid 2px green;
-    color: green;
-}
-
-.signup:hover{    
-    // border:solid 2px red;
-    color: red;
-}
 
 .anime-name{
+    position: absolute;
     padding: 15px;  
     color: black;
-    background-color: white;
-    border: solid 3px green;
-    border-bottom: none;
-    border-radius: 10px;
-    height: 50px;
+    background-color: inherit;
     text-align: center;
-    margin-bottom: -5px;
-    margin-right: 100px;
+    bottom: 0;
+    right: 100px;
     cursor: pointer;
     background-color: lightgray;
 }
-
 .anime-name:hover{
     text-decoration: underline;
 }
+
+//Anime name anbient config
+// #destaques .caption {
+//     position: absolute;
+//     bottom: 0;
+//     z-index: 1;
+//     background: #fafafa;
+//     right: 10%;
+//     font-weight: 700;
+//     text-transform: uppercase;
+//     font-size: 14px;
+//     margin: 0;
+// }
+// h2 {
+//     font-size: 18px;
+//     color: #333;
+// }
+// *, *:before, *:after {
+//     box-sizing: inherit;
+// }
+// *, *::after, *::before {
+//     box-sizing: inherit;
+// }
+
+// user agent stylesheet
+// h2 {
+//     display: block;
+//     font-size: 1.5em;
+//     margin-block-start: 0.83em;
+//     margin-block-end: 0.83em;
+//     margin-inline-start: 0px;
+//     margin-inline-end: 0px;
+//     font-weight: bold;
+// }
 
 /*CSS FOR PAGE CONTENT*/
 
