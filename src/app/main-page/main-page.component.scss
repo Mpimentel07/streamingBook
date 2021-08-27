@@ -1,8 +1,9 @@
 .body{
-    display: grid;
     margin: 0;
-    grid-template-rows: 350px 4fr 0.5fr;
-    max-width: fit-content;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto auto 0.5fr;
+    font-family: inherit;
 
 }
 

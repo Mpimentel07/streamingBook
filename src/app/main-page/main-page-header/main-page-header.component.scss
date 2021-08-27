@@ -1,9 +1,8 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    
 }
-
-
-
 .general-header {
     /*Configurações do Header*/
     position: relative;
@@ -17,85 +16,100 @@
     // background-size: auto auto;
     // background-position-y: -165px;
     /*flexbox settings*/
-
 }
 
-.general-header img{
+.general-header .background{
     z-index: -1;
     width: 100vw;
     height: 55vh;
 }
 
 .header-menu{
-    display: flex;
     position: absolute;
-    width: 100vw;
-    background-image: linear-gradient(#66b360, transparent);
-    
     top: 0;
-    font-size: 1.2em;
+
+    background-image: linear-gradient(#66b360, transparent);
+    font-size: 20px;
     color: #FFF;
-    padding: 10px 50px;
     text-shadow: #444 1px 1px 0;
-    flex-flow: row wrap;
-    // align-content: flex-start;
+    
+    width: 100vw;
+    padding: 10px 50px;
+    height: 15vh;
 }
 
+.logo{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
 
 /*CSS FOR PAGE HEADER*/
 .menu {
+    display: flex;
     font-weight: 900;    
-    flex-grow: 10;  
-    padding: 0 10px 0 10px;
+    padding: 10px 0 10px 0 ;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu ul{
     display: flex;
+    justify-content: flex-start;
+
+    font-size: 0.9em;
+
     list-style: none;
-    align-items: baseline;
-    justify-content: space-evenly;
+
     margin: 0;
     padding:0;    
+    width: 60vw;
+
     cursor: pointer;
 }
 
-
-// .menu li{
-    //     margin:0;
-    //     padding:0;
-    // }
+.menu li{
+        padding-right: 30px;
+}    
     
-    
-aside {
+.sign {
     display: flex;
-    padding: 5px;
-    // justify-content: flex-end;
-    // margin-top: 20px;
+    justify-content: flex-end;
+    width: 35vw;
 }
 
-.botao {
-    padding: 5px 10px;
+.buscar{
+    margin-right: 15px;
+    padding: 3px;
+}
+
+.sign a  {
+    padding-right: 15px;
+    font-size: 0.8em;
     cursor: pointer;
-    
 }
     
-.botao:hover, .menu li:hover{
+.sign a:hover, .menu li:hover{
         text-shadow: 0.01em 0.1em 0.001em black;
-    
 }
-
 
 .anime-name{
     position: absolute;
+
     padding: 15px;  
-    color: black;
-    background-color: inherit;
-    text-align: center;
     bottom: 0;
     right: 100px;
+
+    color: black;
+    text-align: center;
+    font-weight: 700;    
+
     cursor: pointer;
+    
     background-color: lightgray;
 }
+
 .anime-name:hover{
     text-decoration: underline;
 }

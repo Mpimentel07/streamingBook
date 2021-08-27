@@ -8,6 +8,9 @@ import { MainPageHeaderComponent } from './main-page/main-page-header/main-page-
 import { AnimeCardsComponent } from './main-page/anime-cards/anime-cards.component';
 import { FooterComponent } from './footer/footer.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +22,8 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,25 +1,31 @@
 <div class="general-header" >
-    <img src="{{background}}">
+    <img src="{{background}}" class="background">
     <header class="header-menu">
         <section class="menu">
-            <nav >
+            <picture>
+                <a>
+                    <img src="{{logo}}" class="logo">
+                </a>    
+            </picture>
+            <div class="class-nav">
                 <ul>
                     <li *ngFor="let item of headerMenu">
                         <a>{{item}}</a>
                     </li>
                 </ul>
-            </nav>
-
-            <aside>
-                    <a class="botao">Sign in</a>
-                    <a class="botao signup">Sign up</a>
+            </div>
+            <aside class="sign">
+                    <input class="buscar" type="text" placeholder="buscar">
+                    <a>Sign in</a>
+                    <a>Sign up</a>
             </aside>
         </section>
     </header>
     <span class="anime-name">
-        <a>CODE GEASS - HANGYAKY NO LELOUCH</a>
+        <a>CODE GEASS - HANGYAKY NO LELOUCH </a>
     </span>
+   
+  
 </div>
-
 
 <!-- style="background-image:url('{{background}}');" -->
