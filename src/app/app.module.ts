@@ -9,7 +9,11 @@ import { AnimeCardsComponent } from './main-page/anime-cards/anime-cards.compone
 import { FooterComponent } from './footer/footer.component';
 
 
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from './main-page/dialog/dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,11 +21,16 @@ import { FooterComponent } from './footer/footer.component';
     MainPageComponent,
     MainPageHeaderComponent,
     AnimeCardsComponent,
-    FooterComponent
+    FooterComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule
 
     
   ],

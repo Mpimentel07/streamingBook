@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
  
 @Component({
   selector: 'SBK-main-page-header',
@@ -18,12 +19,23 @@ export class MainPageHeaderComponent implements OnInit {
   background: string = 'https://www.anbient.com/files/styles/destaque_large/public/img/destaque-mushishi/destaque-17139.jpg?itok=F9YgomkY&timestamp=1451669716'
   
 
-  
-  constructor() {}
-  ngOnInit(): void {
 
-   
-  }
+
+  constructor(public dialog: MatDialog) { }
+
+  ngOnInit(): void {
+    }
+
+    openDialog(): void {
+      const dialogRef = this.dialog.open(DialogComponent, {
+        width: '250px',
+        height: '400px'
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+       });
+    }
 
  
 
