@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'SBK-main-page',
   templateUrl: './main-page.component.html',

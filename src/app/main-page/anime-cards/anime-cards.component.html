@@ -1,8 +1,16 @@
 <body>
+    <!-- <div class="release">
+        <picture>
+
+        </picture>
+        <article>
+            
+        </article>
+    </div> -->
     <div class="cards-grid">
         <div class="card" *ngFor="let card of cards">
-            <img class="anime-card" src="{{card.path}}" alt="">
-            <h4>{{card.name}}</h4>
+            <img src="{{card.path}}" alt="{{card.name}}">
+            <h4 class="card-name">{{card.name}}</h4>
         </div>
     </div>
-</body>
+</body> 
