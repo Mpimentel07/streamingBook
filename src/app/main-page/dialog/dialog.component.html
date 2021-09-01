@@ -4,16 +4,16 @@
       <div mat-dialog-content>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Email</mat-label>
-          <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+          <input type="email" matInput  placeholder="Ex. pat@example.com">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Senha</mat-label>
-          <input type="senha" matInput [formControl]="emailFormControl" placeholder="">
+          <input type="senha" matInput  placeholder="******">
         </mat-form-field>
       </div>
 
       <div mat-dialog-actions>
-        <button mat-raised-button color="warn" (click)="cancelar()">Fechar</button>
         <button mat-raised-button  color="primary" (click)="cancelar()">Login</button>
+        <button mat-button color="warn" (click)="cancelar()">Fechar</button>
       </div>
 </div>
