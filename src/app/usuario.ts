@@ -1,7 +1,13 @@
 export class Usuario {
 
-    id: String 
-    email: String
-    password: String
-    username: String
+    id: string 
+    email: string
+    password: string
+    username: string
+
+    constructor(username: string, email: string, password: string){
+        this.username = username
+        this.email = email
+        this.password = password
+    }
 }

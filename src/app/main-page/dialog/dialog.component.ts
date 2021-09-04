@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl,  Validators } from '@angular/forms';
+import { FormBuilder, FormGroup,  FormControl,  Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatFormField } from '@angular/material/form-field'
 import { Usuario } from 'src/app/usuario';
@@ -14,34 +14,43 @@ import { UsuarioService } from 'src/app/usuario.service';
 })
 export class DialogComponent implements OnInit {
 
+
+  signForm: FormGroup
+
+  username: string
+  password: string
+  email: string
+  loginError: boolean
+
   constructor( 
     public dialogRef: MatDialogRef<DialogComponent>,
-    private usuarioService: UsuarioService
+    private usuarioService: UsuarioService,
+    private fb: FormBuilder
     ) { }
 
   ngOnInit(): void {
-    const usuario: Usuario = new Usuario()
-    usuario.email ='teste4@teste'
-    usuario.password ='123'
-    usuario.username='Teste4'
-
-    this.usuarioService.save(usuario).subscribe(response => {
-      console.log(response)
+    this.signForm = this.fb.group({
+      username: ['', Validators.required],
+      email: ['',[ Validators.email, Validators.required]],
+      password: ['', Validators.required]
     })
-  }
+ }
+
+ onSubmit(){
+   const formValues = this.signForm.value
+   const usuario: Usuario = new Usuario(formValues.username, formValues.email, formValues.password)
+   this.usuarioService.save(usuario).subscribe(response =>{
+     this.closeModal()
+   })
+ }
 
 
-  cancelar(): void {
+  closeModal(): void {
     this.dialogRef.close();
   }
 
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+
+
+
 }
-
-
-
-
 

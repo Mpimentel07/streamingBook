@@ -16,8 +16,8 @@
             </div>
             <aside class="sign">
                     <input class="buscar" type="text" placeholder="buscar">
-                    <a  (click)="openDialog()">Sign In</a>
-                    <a  (click)="openDialog()">Sign Up</a>
+                    <a (click)="openDialog()"  (click)="setSignIn(true)">Sign In</a>
+                    <a  (click)="openDialog()" (click)="setSignIn(false)">Sign Up</a>
             </aside>
         </section>
     </header>

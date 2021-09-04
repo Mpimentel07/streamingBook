@@ -23,17 +23,16 @@ export class MainPageHeaderComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
+ 
+
   ngOnInit(): void {
     }
 
     openDialog(): void {
       const dialogRef = this.dialog.open(DialogComponent, {
-        width: '250px',
-        height: '400px'
       });
   
       dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
        });
     }
 
