@@ -3,21 +3,31 @@
     <header class="header-menu">
         <section class="menu">
             <picture>
-                <a>
+                <a routerLink="['/']">
                     <img src="{{logo}}" class="logo">
                 </a>    
             </picture>
             <div class="class-nav">
                 <ul>
-                    <li *ngFor="let item of headerMenu">
+                    <!-- <li *ngFor="let item of headerMenu">
                         <a>{{item}}</a>
-                    </li>
+                    </li> -->
+                    <li routerLink="/anime-ranking">Anime Ranking</li>
+                    <li>Seasonal Anime</li>
+                    <li>Discord</li>
+                    <li>Help</li>
                 </ul>
             </div>
             <aside class="sign">
-                    <input class="buscar" type="text" placeholder="buscar">
-                    <a (click)="openDialog()"  (click)="setSignIn(true)">Sign In</a>
-                    <a  (click)="openDialog()" (click)="setSignIn(false)">Sign Up</a>
+                    <mat-form-field class="mat-field">
+                        <mat-label>Buscar</mat-label>
+                        <input matInput class="search" type="text" autocomplete="off">
+
+                    </mat-form-field>
+                    <div>
+                        <a (click)="openDialogSignIn()">Sign In</a>
+                        <a  (click)="openDialogSignUp()">Sign Up</a>
+                    </div>
             </aside>
         </section>
     </header>

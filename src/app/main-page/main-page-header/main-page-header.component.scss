@@ -75,13 +75,17 @@
     
 .sign {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: baseline;
     width: 35vw;
 }
 
-.buscar{
+.search{
     margin-right: 15px;
-    padding: 3px;
+}
+
+.mat-field mat-label{
+    color: white;
 }
 
 .sign a  {
@@ -91,8 +95,11 @@
 }
     
 .sign a:hover, .menu li:hover{
+        color: #8ee487;
         text-shadow: 0.01em 0.1em 0.001em black;
 }
+
+
 
 .anime-name{
     position: absolute;

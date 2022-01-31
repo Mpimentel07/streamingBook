@@ -2,19 +2,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+ 
     min-width: 150px;
     max-width: 250px;
   }
   
-  // .example-full-width {
-  //   // width: 100%;
-  // }
-
+  .example-full-width {
+    width: 100%;
+  }
+ 
   .mat-button{
     margin: 15px 0 0 0;
   }
-
+ 
   .mat-title{
+    text-align: center;
     text-transform: uppercase;
   }

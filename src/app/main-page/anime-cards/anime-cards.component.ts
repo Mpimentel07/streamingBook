@@ -18,22 +18,22 @@ export class AnimeCardsComponent implements OnInit {
 
   createCards(){
     this.cards = [
-      {name: 'Boku no Hero Academia', path: 'https://cdn.anbient.com/cdn/farfuture/UG_WRfbzsr1zHuxBwuMgiGfwBUuPjCUaCbBX1Jm6GVY/mtime:1625068494/files/styles/lancamento/public/img/boku-no-hero-academia-5/release-47395.jpg?itok=s6abb3HK&c=e6a3cafe1cb4a146c0267e0f78b6121c'},
-      {name: 'Edens Zero', path: 'https://cdn.anbient.com/cdn/farfuture/2JqQC0_cG1oEcOVPaFVjxrv5JWVlfpqw37dy5Q7w60k/mtime:1618956369/files/styles/lancamento/public/img/edens-zero/release-46988.jpg?itok=B9VqWzsp&c=7f699ae2775dc13116796af6ee85d375'},
-      {name: 'Scarlet Nexus', path: 'https://cdn.anbient.com/cdn/farfuture/D2EDfwPdqi7yUc_HaPVlNOF4QQbAHz0L_0Hc217_xPE/mtime:1629921113/files/styles/lancamento/public/img/scarlet-nexus/release-47636.jpg?itok=j4ZWJdHD&c=54dba1c4108a5087865b0a010c0322d6'},
-      {name: 'Konbini Kareshi', path: 'https://www.anbient.com/files/styles/lancamento_destaque/public/img/konbini-kareshi/release-33331.jpg?itok=FMflVZbN&c=d9c18d5e0bace1f2c4de8243fbc6a12a'},
-      {name: 'One Piece', path: 'https://cdn.anbient.com/cdn/farfuture/bPJZHzO6JyB_bbkPTVC-a40BBiKWld8kXegwjzHV68Y/mtime:1614519852/files/styles/lancamento/public/img/one-piece/release-19277.jpg?itok=ADBvb_jL&c=50f7163cadcc5e5886e2a1844328d644'},
-      {name: 'Genjitsu Shugi Yuusha no Oukoku', path: 'https://cdn.anbient.com/cdn/farfuture/bBU1BGNQYehrfJ9bDYXihoDTgN7mHdJZKBZA0cGCk8Q/mtime:1627935714/files/styles/lancamento/public/img/genjitsu-shugi-yuusha-no-oukoku-saikenki/release-47565.jpg?itok=Y-iMb6JW&c=e6a3cafe1cb4a146c0267e0f78b6121c'},
-      {name: 'Azur Lane: Bisoku Zenshin', path: 'https://cdn.anbient.com/cdn/farfuture/eEFrclqHsJEaD0MqpeI1Wd7uwo4774zuv8yiXaCTMnA/mtime:1627935788/files/styles/lancamento/public/img/azur-lane-bisoku-zenshin/release-47590.jpg?itok=4Ha95E0z&c=d446b1c7eff9f48e2b17df9bfdf18cf7'},
-      {name: 'Beastars 2nd Season', path: 'https://cdn.anbient.com/cdn/farfuture/4Uvr0x9bLmAGvqhQN7AmMZyC5w-QwCO8IcA-NmtiO9E/mtime:1627601427/files/styles/lancamento/public/img/beastars-2nd-season/release-47522.jpg?itok=7JxkPEMc&c=fda1e6ca541249a2426684141e14a817'},
-      {name: 'Tokyo Revengers', path: 'https://www.anbient.com/files/styles/lancamento/public/img/tokyo-revengers/release-46927.jpg?itok=4DnQpOWG&c=e6a3cafe1cb4a146c0267e0f78b6121c'},
-      {name: 'Night Head', path: 'https://cdn.anbient.com/cdn/farfuture/2zsAbWCkycDGu3O4HlCJ5gLBcMonafD5PPKn90wnnKM/mtime:1627595568/files/styles/lancamento/public/img/night-head-2041/release-47500.jpg?itok=I2FYK_2W&c=084dc8e58ed16eab35e331810783fac6'},
-      {name: 'Kumo Desu Ga', path: 'https://cdn.anbient.com/cdn/farfuture/54ZKDzJwj6Ntc-A85wlQ4EJ65AFv4XDUhBoPRoH5ALU/mtime:1626057930/files/styles/lancamento/public/img/kumo-desu-ga-nani-ka/release-46569.jpg?itok=9QFir67d&c=a84a41c0b9e8a688105479bfc7769365'},
-      {name: 'Majo no Tabitabi', path: 'https://cdn.anbient.com/cdn/farfuture/Q7_eCbjnWC4dMUNOmq3JR8DFqVHX6CE4Rqq7n6-bx4U/mtime:1625066183/files/styles/lancamento/public/img/majo-no-tabitabi/release-45709.jpeg?itok=B8HN36QR&c=6b13384a62236423d9b099aad04a2848'},
-      {name: 'Shingeki No Kyojin - Final Season', path: 'https://cdn.anbient.com/cdn/farfuture/LywV1rOLi-5GWQCC2zJ7b5wrD5pCYFS8O6mFQeAqiEM/mtime:1614609968/files/styles/lancamento/public/img/shingeki-no-kyojin-season-4/release-46531.png?itok=1THJ5lS_&c=d98c4647d394a8d9d76043bd31f89734'},
-      {name: 'Ling QI 2 (Completo)', path: 'https://www.anbient.com/files/styles/lancamento/public/img/ling-qi-2/release-47646.jpg?itok=UiU7nqrQ&c=d111dbe02776f03fd49ae24e8d4071ca'},
-      {name: 'Nagatoro-San', path: 'https://www.anbient.com/files/styles/lancamento/public/img/ijiranaide-nagatoro-san/release-46968.jpg?itok=xXufVNh8&c=476a2f6d2fce0e1e121dbe94f16bc8a4'},
-      {name: 'Hataraku Saibou', path: 'https://cdn.anbient.com/cdn/farfuture/kU501mdw51JSCbgPL8_gVvyYWYInMgtgcA6hk7SjLBo/mtime:1625018145/files/styles/lancamento/public/img/hataraku-saibou/release-47386.jpg?itok=Hb5gNgZN&c=77166e38eaccbc188c7b865aae18ca58'},
+      {name: 'SHIKKAKUMON NO SAIKYOU KENJA', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/shikkakumon-no-saikyou-kenja/release-49018.jpg?itok=BGO7U2qY&c=36974f1238e167ceb98c0d0756bb7049'},
+      {name: 'TOKYO 24-KU', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/tokyo-24-ku/release-49035.jpg?itok=lmr7EyPO&c=9c5d10b49c3e392ddeb9e5f7916d799b'},
+      {name: 'KOROSHI AI', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/koroshi-ai/release-49026.jpg?itok=3QMOTBGP&c=fda1e6ca541249a2426684141e14a817'},
+      {name: 'TRIBE NINE', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/tribe-nine/release-49009.jpg?itok=58ilUa1C&c=09e1a0ccfe559ac805da828168404bba'},
+      {name: 'IE NAKI KO', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/ie-naki-ko/release-48546.png?itok=yVhaNVxs&c=f8ba6d86a91ee758c0d54021f4961369'},
+      {name: 'ANGEL DENSETSU', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/angel-densetsu/release-49506.jpg?itok=tSc02fXn&c=8cb4d54c293941b532ac0bd16f0fa512'},
+      {name: 'ANGEL COP', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/angel-cop/release-49497.jpg?itok=8jkU6i2n&c=8947aecc815d2a155d13810a162f08dc'},
+      {name: 'NAPPING PRINCESS', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/napping-princess/release-49489.jpg?itok=5naBrCTt&c=788c02f1878e8c8f87f87f8c11e895b8'},
+      {name: 'BARA OU NO SOURETSU', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/bara-ou-no-souretsu/release-49092.jpg?itok=NMKcXVX5&c=b269debbc57c87dfda1e1228bfd0fdb2'},
+      {name: 'CUE!', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/cue/release-49064.jpg?itok=J3QFqE3Y&c=daeda0d4983f62bf286b0a6558a4fa0c'},
+      {name: 'BRAIN POWERD', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/brain-powerd/release-49455.jpg?itok=Qx7jyT2c&c=febe29857400fdc4ed4a3b1aaf91b4f7'},
+      {name: 'KAIJIN KAIHATSU-BU NO KUROITSU-SAN', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/kaijin-kaihatsu-bu-no-kuroitsu-san/release-49101.jpg?itok=xz1NAN3r&c=46ae63f7395dd71592c36a06342db254'},
+      {name: 'ONE PIECE', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/s3fs-public/img/one-piece/release-19277.jpg?itok=9-1WQM5t&c=50f7163cadcc5e5886e2a1844328d644'},
+      {name: 'ANGE VIERGE', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/s3fs-public/img/ange-vierge/release-25639.jpg?itok=WdecZBKo&c=72332a14da4dc0b1494937cfa5f2f60b'},
+      {name: 'FANTASY BISHOUJO JUNIKU OJISAN TO', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/fantasy-bishoujo-juniku-ojisan-to/release-49066.jpg?itok=Dhq4JGTz&c=e6a3cafe1cb4a146c0267e0f78b6121c'},
+      {name: 'SASAKI TO MIYANO', path: 'https://anb-web-d7-prod.s3.br-sao.cloud-object-storage.appdomain.cloud/styles/lancamento/s3/img/sasaki-to-miyano/release-49432.jpg?itok=6q5usaPC&c=09833d9ff321bc4884e450e55494abd7'},
 
    
     ]
