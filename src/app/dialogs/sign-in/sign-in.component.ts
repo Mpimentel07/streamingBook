@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,  FormControl,  Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatFormField } from '@angular/material/form-field';
+import { AuthService } from 'src/app/auth.service';
+
 import { Usuario } from '../../usuario';
-import { UsuarioService } from '../../usuario.service';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
 
 @Component({
@@ -18,11 +22,16 @@ export class SignInComponent implements OnInit {
   username: string
   password: string
   email: string
-  loginError: boolean 
+
+  error: boolean 
+  success: boolean
+
+  errors: String []
  
   constructor( 
     public dialogRef: MatDialogRef<SignInComponent>,
-    private usuarioService: UsuarioService,
+    public dialog: MatDialog,
+    private authService: AuthService,
     private fb: FormBuilder
     ) { }
  
@@ -36,13 +45,35 @@ export class SignInComponent implements OnInit {
  onSubmit(){
    const formValues = this.signInForm.value
    const usuario: Usuario = new Usuario(formValues.username, formValues.password)
-   this.usuarioService.save(usuario).subscribe(response =>{
-    this.closeModal()
-   })
+   this.authService.tentarLogar(this.username, this.password)
+                   .subscribe(response =>{
+                     const accessToken = JSON.stringify(response)
+                     localStorage.setItem('accessToken', accessToken)
+                      this.success = true
+                      this.error = false
+                      this.username = ''
+                      this.password = ''
+                      this.errors = []    
+                      this.closeModal()
+                    }, errorResponse =>{
+                      this.success = false
+                      this.error = true
+                      this.errors = ['Usuário e/ou Senha Incorretos']
+                      console.log('Erro apresentado: ', errorResponse.error)
+                    })
  } 
  
   closeModal(): void {
     this.dialogRef.close();
+  }
+
+  openDialogSignUp(): void {
+    this.closeModal()
+    const dialogRef = this.dialog.open(SignUpComponent, {
+      
+    });
+    dialogRef.afterClosed().subscribe(result => {
+     });
   }
  
 

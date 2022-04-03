@@ -5,11 +5,22 @@ export class Usuario {
     password: string
     username: string
 
-    constructor(username: string,  password: string, email?: string,){
+    constructor(username: string,  password: string, email?: string){
         this.username = username
         this.password = password
         this.email = email
     }
 
-
 }
+
+// export class UsuarioLogin {
+
+//     id: string 
+//     password: string
+//     username: string
+
+//     constructor(username: string,  password: string, email?: string){
+//         this.username = username
+//         this.password = password
+//     }
+// }

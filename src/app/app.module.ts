@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +24,19 @@ import  { AuthService } from './auth.service';
 import { AnimeRankingModule } from './anime-ranking/anime-ranking.module'
 import { RouterModule } from '@angular/router'
 
+import { TokenInterceptor } from './token.interceptor';
+import { AddAnimeComponent } from './add-anime/add-anime.component';
+
+import { MatSelectModule } from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core'
+import {MatChipsModule} from '@angular/material/chips';
+import {MatListModule} from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +46,7 @@ import { RouterModule } from '@angular/router'
     FooterComponent,
     SignUpComponent,
     SignInComponent,
+    AddAnimeComponent
     
   ],
   imports: [
@@ -41,16 +55,33 @@ import { RouterModule } from '@angular/router'
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatDialogModule,
     BrowserAnimationsModule,
+    AnimeRankingModule,
     MatInputModule,
-    MatButtonModule,
     MatFormFieldModule,
-    AnimeRankingModule
+    MatDialogModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatChipsModule,
+    MatListModule,
+    MatExpansionModule
+    
+    
+    
 
     
   ],
-  providers: [UsuarioService, AuthService],
+  providers: [UsuarioService, 
+              AuthService,
+              MatDatepickerModule,
+              {
+                provide: HTTP_INTERCEPTORS,
+                useClass: TokenInterceptor,
+                multi: true
+              }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

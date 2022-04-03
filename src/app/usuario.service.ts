@@ -18,4 +18,6 @@ export class UsuarioService {
   save (usuario: Usuario): Observable<Usuario>{
     return this.http.post<Usuario>(`${this.url}/api/usuarios`, usuario)
   }
+
+  // *****auth.service está fazendo a mesma função*****
 }

@@ -1,32 +1,39 @@
-<form class="mat-form" [formGroup]="signInForm">
-    <h1 class="mat-title" mat-dialog-title>Login</h1>
 
-      <div mat-dialog-content>
-        <mat-form-field class="example-full-width" appearance="fill">
+
+<form class="mat-form" [formGroup]="signInForm">
+
+      <h1 class="mat-title" mat-dialog-title>Login</h1>
+
+      <div mat-dialog-content class="mat-dialog-content">
+
+        <!-- Não funciona-->
+        <!-- <mat-error *ngFor="let erro of errors">{{errors}}</mat-error> -->
+
+        <mat-form-field class="mat-field" appearance="fill">
           <mat-label>Username</mat-label>
           <input type="name" matInput formControlName="username" placeholder="username123">
         </mat-form-field>
-        <!-- <div *ngIf="signInForm.controls.username.errors">
-          <div *ngIf="signForm.controls.username.errors.required">
-            Username Obrigatório
-          </div>
-        </div> -->
+          <!-- <mat-error *ngIf="signInForm.controls.username.errors.required">
+            Usuário Obrigatório
+          </mat-error> -->
 
-        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-form-field class="mat-field" appearance="fill"> 
           <mat-label>Senha</mat-label>
           <input type="password" formControlName="password" matInput  placeholder="******">
         </mat-form-field>
-<!--         <div *ngIf="signInForm.controls.password.errors">
-          <div *ngIf="signForm.controls.password.errors.required">
-            Senha Obrigatória
-          </div>
-        </div> -->
+    
       </div>
- 
+
+
       <div mat-dialog-actions class="mat-button">
-        <button mat-raised-button  color="primary" (click)="onSubmit()" >LogIn</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()" >Login</button>
         <button mat-button color="warn" (click)="closeModal()">Fechar</button>
       </div>
- 
+
+      <div >
+        <button mat-raised-button class="clique-aqui" (click)="openDialogSignUp()">
+          Não possui uma conta? Clique aqui!  
+        </button>
+      </div>
+
 </form>
-<!--  [disabled]="!signForm.valid"  -->

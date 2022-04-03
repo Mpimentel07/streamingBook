@@ -1,6 +1,8 @@
 export class Anime {
     //Anime Ranking Table Attributes
+    id: string
     nome: string
+    //Stats
     plataform_aired: string
     period_aired: string
     members: number
@@ -8,7 +10,7 @@ export class Anime {
     Status: string //"Watching" "Completed" "on-hold" etc
     episodes: number
     general_score: number // como fazer um atributo que faça média dos usuarios?
-    original_kanji_name: string
+    // original_kanji_name: string
     season: string
     producers: string[] = []
     licensors: string
@@ -19,8 +21,8 @@ export class Anime {
     duration: string
     rating: string
     ranked: number // ranking rating position
-
     synopsis: string
+
 
     //anime_picture: type????
     //anime_cover: type

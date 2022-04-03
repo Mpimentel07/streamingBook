@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup,  FormControl,  Validators } from '@angular/form
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatFormField } from '@angular/material/form-field'
 import { Usuario } from '../../usuario';
-import { UsuarioService } from '../../usuario.service';
 import { MainPageHeaderComponent } from '../../main-page/main-page-header/main-page-header.component';
 import { AuthService } from 'src/app/auth.service';
  
@@ -22,13 +21,15 @@ export class SignUpComponent implements OnInit {
   username: string
   password: string
   email: string
-  success: string
+
+  success: boolean
+  error: boolean
+
   errors: string[]
  
  
   constructor( 
     public dialogRef: MatDialogRef<SignUpComponent>,
-    private usuarioService: UsuarioService,
     private fb: FormBuilder,
     private authService: AuthService
     ) { }
@@ -40,16 +41,24 @@ export class SignUpComponent implements OnInit {
       email: ['',[ Validators.email, Validators.required]]
     })
  }
+
+
  
  onSubmit(){
    const formValues = this.signUpForm.value
    const usuario: Usuario = new Usuario(formValues.username,  formValues.password, formValues.email)
    this.authService.save(usuario).subscribe(response =>{
     console.log(usuario)
+    this.success = true
+    this.error = false
+    this.username = ''
+    this.password = ''
+    this.errors = []
     this.closeModal()
 
    }, errorResponse => {
-    this.success = null
+    this.error = true
+    this.success = false
     this.errors = errorResponse.error.errors;
    })
  } 

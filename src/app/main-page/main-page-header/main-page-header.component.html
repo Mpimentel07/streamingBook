@@ -1,23 +1,31 @@
-<div class="general-header" >
-    <img src="{{background}}" class="background">
+<div class="general-header">
+    <picture>
+        <source srcset="assets/FULLMETAL-ALCHEMIST-BROTHERHOOD-910px.jpg"
+             class="cover"
+        media="(max-width: 910px)">
+
+        <img src="assets/FULLMETAL ALCHEMIST BROTHERHOOD 1366px.jpg" 
+             class="background">
+    </picture>
+
+
     <header class="header-menu">
         <section class="menu">
             <picture>
                 <a routerLink="['/']">
-                    <img src="{{logo}}" class="logo">
-                </a>    
+                    <img src="assets/logo.png" 
+                         class="logo">
+                </a>
             </picture>
-            <div class="class-nav">
+            <div class="menu-nav">
                 <ul>
-                    <!-- <li *ngFor="let item of headerMenu">
-                        <a>{{item}}</a>
-                    </li> -->
-                    <li routerLink="/anime-ranking">Anime Ranking</li>
+                    <li routerLink="/ranking">Anime Ranking</li>
                     <li>Seasonal Anime</li>
                     <li>Discord</li>
-                    <li>Help</li>
+                    <li routerLink="/adicionar">Adicionar Anime</li>
                 </ul>
             </div>
+
             <aside class="sign">
                     <mat-form-field class="mat-field">
                         <mat-label>Buscar</mat-label>
@@ -25,8 +33,8 @@
 
                     </mat-form-field>
                     <div>
-                        <a (click)="openDialogSignIn()">Sign In</a>
-                        <a  (click)="openDialogSignUp()">Sign Up</a>
+                        <a (click)="openDialogSignIn()">Login</a>
+                        <!-- <a  (click)="openDialogSignUp()">Sign Up</a> -->
                     </div>
             </aside>
         </section>
@@ -34,8 +42,8 @@
     <span class="anime-name">
         <a>CODE GEASS - HANGYAKY NO LELOUCH </a>
     </span>
-   
-  
+
+
 </div>
 
 <!-- style="background-image:url('{{background}}');" -->

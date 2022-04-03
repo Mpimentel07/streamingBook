@@ -3,25 +3,40 @@
     // margin: 0;
     
 }
+
+//CONFIGS DO HEADER 
 .general-header {
-    /*Configurações do Header*/
+    width: 100vw;
     position: relative;
-    // display: flex;
-    height: 350px;
-    /*Background settings*/
-    // background-image: url('https://images3.alphacoders.com/574/thumb-1920-57497.jpg');
-    // border-bottom:solid 3px green;
-    // background-position: center;
-    // background-repeat: no-repeat; 
-    // background-size: auto auto;
-    // background-position-y: -165px;
-    /*flexbox settings*/
 }
 
-.general-header .background{
-    z-index: -1;
+//CONFIGS DO BACKGROUND DO HEADER
+.cover {
     width: 100vw;
-    height: 55vh;
+
+    z-index: -1;
+    position: fixed;
+    background-size: cover;
+}
+
+//90%
+@media(max-width: 1229px){
+    .general-header .background {
+        width: auto;
+    }
+}
+
+//Login + Buscar 
+@media(max-width: 929px){
+    .sign{
+        visibility: hidden;
+    }
+}
+//Menu de Opções
+@media(max-width: 780px){
+    .menu-nav{
+        visibility: hidden;
+    }
 }
 
 .header-menu{
@@ -29,18 +44,18 @@
     top: 0;
 
     background-image: linear-gradient(#66b360, transparent);
-    font-size: 20px;
+    font-size: 20px;//MUDAR ISSO PARA VALORES RELATIVOS
     color: #FFF;
     text-shadow: #444 1px 1px 0;
     
     width: 100vw;
     padding: 10px 50px;
-    height: 15vh;
+    // height: 15vh;
 }
 
 .logo{
     width: 50px;
-    height: 50px;
+    // height: 50px;
     cursor: pointer;
 }
 
@@ -52,6 +67,10 @@
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu-nav{
+    padding: 10px;
 }
 
 .menu ul{
@@ -75,7 +94,7 @@
     
 .sign {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: baseline;
     width: 35vw;
 }
@@ -117,66 +136,15 @@
     background-color: lightgray;
 }
 
+@media(max-width: 1229px) {
+    .anime-name{
+        visibility: hidden;
+    }
+}
+
 .anime-name:hover{
     text-decoration: underline;
 }
-
-//Anime name anbient config
-// #destaques .caption {
-//     position: absolute;
-//     bottom: 0;
-//     z-index: 1;
-//     background: #fafafa;
-//     right: 10%;
-//     font-weight: 700;
-//     text-transform: uppercase;
-//     font-size: 14px;
-//     margin: 0;
-// }
-// h2 {
-//     font-size: 18px;
-//     color: #333;
-// }
-// *, *:before, *:after {
-//     box-sizing: inherit;
-// }
-// *, *::after, *::before {
-//     box-sizing: inherit;
-// }
-
-// user agent stylesheet
-// h2 {
-//     display: block;
-//     font-size: 1.5em;
-//     margin-block-start: 0.83em;
-//     margin-block-end: 0.83em;
-//     margin-inline-start: 0px;
-//     margin-inline-end: 0px;
-//     font-weight: bold;
-// }
-
-/*CSS FOR PAGE CONTENT*/
-
-
-// li:hover:nth-child(1){
-//     color: mediumseagreen;
-// }
-
-// li:hover:nth-child(2){
-//     color: royalblue;
-// }
-
-// li:hover:nth-child(3){
-//     color: cadetblue;
-// }
-
-// li:hover:nth-child(4){
-//     color: mediumturquoise;
-// }
-
-
-
-
 
 
 

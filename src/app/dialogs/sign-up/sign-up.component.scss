@@ -1,20 +1,45 @@
-.mat-form{
+  .mat-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
- 
+    align-items: center;
+    padding: 0;
+
     min-width: 150px;
     max-width: 250px;
   }
+
+  .mat-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #2ead23;
+    text-shadow: 0.1em 0.1em 1em black;
+    //text-shadow: eixo-x eixo-y espalhamento
+  }
+
+  .mat-dialog-content{
+    padding: inherit;
+    margin: 0 5px 0 5px;
+  }
   
   .mat-field {
+    box-sizing: border-box ;
     width: 100%;
   }
- 
+
   .mat-button{
-    margin: 15px 0 0 0;
+    margin: 15px 0 15px 0;
+  }
+
+  .mat-button button:nth-child(1):enabled {
+    background-color: #2ead23; // cor padrão de botões
+  }
+
+  .matErrorMessage{
+    position: center;
   }
  
-  .mat-title{
-    text-transform: uppercase;
-  }
+
+ 
+
