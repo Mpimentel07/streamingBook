@@ -1,3 +1,4 @@
+
 .body{
     position: relative;
     background-color: lightgray;
@@ -6,29 +7,49 @@
 
 }
 
-.sidenav{
-    position: absolute;
+.mat-sidenav-container{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    width: 100vw;
 
+}
+
+
+.mat-sidenav{
+    width: 50vw;
+    max-width: 300px;
+    // padding: 5%;
+    background-color: #66b360;
+    color: white;
   }
 
+.mat-sidenav-content{
+    height: 100vh;
+}
+
 .sidenav-menu{
-    width: 50vw;
     list-style: none;
     text-transform: uppercase;
-    background-color: #66b360;
-    height: 100%;
     color: white;
     display: flex;
     flex-flow: column;
     align-items: center;
 }
 
-.sidenav-menu li{
-    padding: 10% 0%;
+// .sidenav-menu li{
+//     width: 100%;
+//     padding: 10% 0;
+//     cursor: pointer;
+// }
+
+// li > span{
+//     padding-left: 5%;
+// }
+
+.sidenav-menu li:hover{
+    background-color: #368b30;
 }
+
+
 
 
 

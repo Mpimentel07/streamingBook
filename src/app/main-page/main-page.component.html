@@ -1,21 +1,20 @@
-<mat-sidenav-container class="sidenav">
-  <mat-sidenav #sidenav>
-    <!-- <ul>
-      <li *ngFor="let m of menu">
-        <span routerLink="{{m.path}}">{{m.label}}</span>
-      </li>
-    </ul> -->
-    <ul class="sidenav-menu">
-      <li routerLink="/ranking">anime ranking</li>
-      <li>seasonal anime</li>
-      <li>discord</li>
-      <li routerLink="/adicionar">adicionar anime</li>
-    </ul>
-  </mat-sidenav>
-
-<div class="body" (backdropClick)="close()" >
-        <SBK-main-page-header></SBK-main-page-header>
-        <SBK-anime-cards></SBK-anime-cards>
-</div>
-</mat-sidenav-container>
+<mat-sidenav-container class="mat-sidenav-container">
+        <mat-sidenav    #sidenav="matSidenav"
+                        class="mat-sidenav" 
+                        mode="over">
+                <ul>
+                    <li *ngFor="let m of menu" class=".sidenav-menu">
+                        <span routerLink="{{m.path}}">{{m.label}}</span>
+                    </li>
+                </ul>
+        </mat-sidenav>
+        <mat-sidenav-content class="mat-sidenav-content mat-elevation-z4">
+                          <div class="body">
+                                  <SBK-main-page-header></SBK-main-page-header>
+                                  <SBK-anime-cards></SBK-anime-cards>
+                                  <SBK-footer></SBK-footer>
+                          </div>
+          </mat-sidenav-content>
+  </mat-sidenav-container>
+  
 
