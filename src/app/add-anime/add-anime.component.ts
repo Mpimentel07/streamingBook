@@ -14,11 +14,13 @@ import { MatNativeDateModule } from '@angular/material/core';
 export class AddAnimeComponent implements OnInit {
   ngOnInit(): void {
   }
-
-  Genres: string[] = ['Shönen', 'Shöjo', 'Seinen', 'Mecha', 'Fantasy', 'School', 'Hentai', 'Ecchi'];
-  panelOpenState = false;
-
-
-
-
 }
+
+
+
+
+
+
+
+
+

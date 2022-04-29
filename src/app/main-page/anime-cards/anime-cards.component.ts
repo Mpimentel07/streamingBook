@@ -19,7 +19,7 @@ export class AnimeCardsComponent implements OnInit {
 
   createCards(){
     this.cards = [
-      {name: 'DEMON SLAYER', path: 'assets/cards/KIMETSU NO YAIBA.jpg'},
+      {name: 'demon slayer', path: 'assets/cards/KIMETSU NO YAIBA.jpg'},
       {name: 'ANGEL BEATS!', path: 'assets/cards/ANGEL BEATS!.jpg'},
       {name: 'BORUTO: NARUTO NEXT GENERATION', path: 'assets/cards/BORUTO NARUTO NEXT GENERATIONS.jpg'},
       {name: 'AO NO EXORCIST', path: 'assets/cards/AO NO EXORCIST.jpg'},

@@ -3,6 +3,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { SignInComponent } from 'src/app/dialogs/sign-in/sign-in.component';
 import { SignUpComponent } from 'src/app/dialogs/sign-up/sign-up.component';
 import { MatFormField } from '@angular/material/form-field';
+import {MatSidenav} from '@angular/material/sidenav';
+import { MainPageComponent } from '../main-page.component';
+
 
  
 @Component({
@@ -12,12 +15,27 @@ import { MatFormField } from '@angular/material/form-field';
 })
 export class MainPageHeaderComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+              public mainRef: MainPageComponent) { }
 
+  //BUILDING MENU
+  menu: any[];
 
   ngOnInit(): void {
+    this.createMenu();
+    console.log(this.menu);
+
     }
 
+  createMenu(){
+    this.menu = [
+      {label: 'anime ranking', path:'/ranking'},
+      {label: 'seasonal anime', path:''},
+      {label: 'discord', path:''},
+      {label: 'adicionar anime', path:'/adicionar'}
+    ]
+  }
+    //LOGIN DIALOG
     openDialogSignIn(): void {
       const dialogRef = this.dialog.open(SignInComponent, {
 
@@ -27,11 +45,25 @@ export class MainPageHeaderComponent implements OnInit {
       })
     }
 
+    open($event){
+
+      this.mainRef.open($event)
+    }
+
+
+
+
+  
+  }
+
+
+    
+
 
 
  
 
-}
+
 
 
 

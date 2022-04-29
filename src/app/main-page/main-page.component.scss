@@ -1,11 +1,34 @@
 .body{
-    // margin: 0;
-    // padding: 0;
-    // display: grid;
-    // grid-template-rows: 350px auto 0.5fr;
-    font-family: inherit;
+    position: relative;
     background-color: lightgray;
-    }
+    box-sizing: border-box;
+    text-transform: uppercase;
+
+}
+
+.sidenav{
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+  }
+
+.sidenav-menu{
+    width: 50vw;
+    list-style: none;
+    text-transform: uppercase;
+    background-color: #66b360;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.sidenav-menu li{
+    padding: 10% 0%;
+}
 
 
 

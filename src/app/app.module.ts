@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, TemplateRef } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -34,6 +34,8 @@ import { MatNativeDateModule } from '@angular/material/core'
 import {MatChipsModule} from '@angular/material/chips';
 import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ExpansionPanelComponent } from './add-anime/expansion-panel/expansion-panel.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 
@@ -46,7 +48,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     FooterComponent,
     SignUpComponent,
     SignInComponent,
-    AddAnimeComponent
+    AddAnimeComponent,
+    ExpansionPanelComponent
     
   ],
   imports: [
@@ -67,7 +70,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatNativeDateModule,
     MatChipsModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSidenavModule
     
     
     

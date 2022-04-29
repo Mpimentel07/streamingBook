@@ -1,32 +1,45 @@
-body{
-    display:flex;
-    align-content: center;
-    position: relative;
+.body{
     box-sizing: border-box;
+    display:flex;
+    position: relative;
+
+    align-content: center;
+    justify-content: center;
 }
 
 .cards-grid{
     display: grid;
 
-    margin: 40px;
-    width: calc(100% - 100px);
+    // margin: 40px;
+    // width: calc(100% - 100px);
 
-    grid-template-columns: repeat(4, 300px);
-    grid-template-rows: repeat(4, auto);
+    margin: 5vh 3vw;
+
+    // grid-template-columns: repeat(4, 22vw);
+    // grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: 
+    "card card card card"
+    "card card card card"
+    "card card card card"
+    "card card card card";
 
     
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 3vh;
     
     align-items: center;
     justify-content: center;
+
+
 }
 
 .card{
     position: relative;
     cursor: pointer;
-    width: 300px;
     overflow: hidden;
+
+    grid-area: "card";
 }
 
 .card:hover{
@@ -40,40 +53,75 @@ body{
 .card-name {
     //Posicionamento
     position: absolute;
-    margin:0;
-    bottom: 36px;
-    padding: 10px 0 10px 10px;
+    margin: 0;
+    // bottom: 18%;
+    bottom: 0%;
+    // padding: 10px 0 10px 10px;
+    padding: 3% 0 3% 3%;
     //Texto
-    text-transform: uppercase;
     font-weight: bold;
     color: white;
     font-size: 0.8em;
     //Efeito
     background-color: black;
-    opacity: 0.7;
+    opacity: 0.9;
     //Largura
-    width: 100vw;
+    width: 100%;
 }
 //MAT CARD
 
-.mat-image{
-    height: 100%;
-}
-.mat-actions{
-    margin: 0;
-    background-color: #2ead23;
-    color: white;
-    position: relative;
+.mat-image, .card{
+    max-width: 300px;
+    min-width: 200px;
 }
 
-mat-card-actions button{
-    width: 150px;
+// .mat-actions{
+//     margin: 0;
+//     background-color: #2ead23;
+//     color: white;
+//     position: relative;
+// }
+
+@media(max-width: 1200px){
+    .cards-grid{
+
+        grid-template-areas:
+        "card card card "
+
+
+    ;
+    }
 }
 
-mat-card-actions button:hover{
-    background-color: #24861c;
+@media(max-width: 910px){
+    .cards-grid{
+
+        grid-template-areas:
+        "card card "
+
+        ;
+    }
+}
+
+@media(max-width: 600px){
+        .cards-grid{
     
+            grid-template-areas:
+            "card"
+
+            ;
+        }
+
 }
+
+// mat-card-actions button{
+//     width: 50%;
+// }
+
+// mat-card-actions button:hover{
+//     background-color: #24861c;
+    
+// }
 
 
 

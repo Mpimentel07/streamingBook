@@ -1,4 +1,4 @@
-<body>
+<body class="body">
     <!-- <div class="release">
         <picture>
 
@@ -11,20 +11,22 @@
 
         <div class="card" *ngFor="let card of cards">
             <!-- COLOCAR UMA ANCORA AQUI-->
+            <a>
                 <mat-card class="mat-card">
                     <mat-card-header>
                     <mat-card-title class="card-name">{{card.name}}</mat-card-title>
                     </mat-card-header>
                     <img mat-card-image class="mat-image" src="{{card.path}}" alt="{{card.name}}">
 
-                    <div class="mat-actions">
+                    <!-- <div class="mat-actions">
                         <mat-card-actions class="buttons">
                             <button mat-button>ASSISTIR</button>
                             <button mat-button>COMPARTILHAR</button>
                         </mat-card-actions>
-                    </div>
+                    </div> -->
                 </mat-card>
-                <!-- </a> -->
-            </div>
+
+            </a>
+        </div>
     </div>
 </body> 

@@ -1,9 +1,21 @@
-<div class="body">
-    <div >
+<mat-sidenav-container class="sidenav">
+  <mat-sidenav #sidenav>
+    <!-- <ul>
+      <li *ngFor="let m of menu">
+        <span routerLink="{{m.path}}">{{m.label}}</span>
+      </li>
+    </ul> -->
+    <ul class="sidenav-menu">
+      <li routerLink="/ranking">anime ranking</li>
+      <li>seasonal anime</li>
+      <li>discord</li>
+      <li routerLink="/adicionar">adicionar anime</li>
+    </ul>
+  </mat-sidenav>
+
+<div class="body" (backdropClick)="close()" >
         <SBK-main-page-header></SBK-main-page-header>
-    </div>
-    <div class="page-content">
         <SBK-anime-cards></SBK-anime-cards>
-    </div>
 </div>
+</mat-sidenav-container>
 

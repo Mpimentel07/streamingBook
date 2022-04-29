@@ -1,73 +1,11 @@
 <body class="body">
+
     <div class="form">
 
-        <mat-form-field class="nome input">
-            <mat-label>Nome do Anime</mat-label>
-            <input matInput class="input" type="text" autocomplete="off">
-        </mat-form-field>
-
-        <mat-form-field appearance="fill" class="season input">
-            <mat-label>Season</mat-label>
-            <mat-select disableRipple>
-                <mat-option value="0">Selecione...</mat-option>
-                <mat-option value="1">Inverno</mat-option>
-                <mat-option value="2">Primavera</mat-option>
-                <mat-option value="3">Verão</mat-option>
-                <mat-option value="4">Outono</mat-option>
-            </mat-select>
-        </mat-form-field>
-
-        
-        <mat-form-field appearance="fill">
-            <mat-label>Período de Lançamento</mat-label>
-            <mat-date-range-input [rangePicker]="picker">
-                <input matStartDate placeholder="Start date">
-                <input matEndDate placeholder="End date">
-            </mat-date-range-input>
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-date-range-picker #picker></mat-date-range-picker>
-        </mat-form-field>
-        
-        <mat-form-field appearance="fill" class="season input">
-            <mat-label>Studio</mat-label>
-            <mat-select disableRipple>
-              <mat-option value="0">Selecione...</mat-option>
-              <mat-option value="Kyoto Animation">Kyoto Animation</mat-option>
-              <mat-option value="MadHouse">MadHouse</mat-option>
-              <mat-option value="Ufotable">Ufotable</mat-option>
-              <mat-option value="Wit Studio">Wit Studio</mat-option>
-              <mat-option value="Bones">Bones</mat-option>
-              <mat-option value="Studio Ghibili">Studio Ghibili</mat-option>
-              <mat-option value="A-1 Pictures">A-1 Pictures</mat-option>
-              <mat-option value="Wit Studio">Wit Studio</mat-option>
-              <mat-option value="Sunrise">Sunrise</mat-option>
-              <mat-option value="Gainax">Gainax</mat-option>
-
-            </mat-select>
-        </mat-form-field>
-
-        
-        <mat-accordion class="genres">
-            <mat-expansion-panel hideToggle>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Gêneros
-                    </mat-panel-title>
-                    
-                </mat-expansion-panel-header>
-                
-                <mat-selection-list #shoes>
-                    <mat-list-option *ngFor="let genre of Genres">
-                      {{genre}}
-                    </mat-list-option>
-                  </mat-selection-list>
-            </mat-expansion-panel>
-           
-          </mat-accordion>
+      <div class="expansion">
+          <SBK-expansion-panel></SBK-expansion-panel>
+      </div>         
           
-
-
-
     </div>
 
 </body>

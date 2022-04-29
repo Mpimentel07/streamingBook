@@ -13,3 +13,5 @@ export class AnimeRankingFormComponent implements OnInit {
   }
 
 }
+
+

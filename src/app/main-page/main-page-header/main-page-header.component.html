@@ -1,49 +1,60 @@
-<div class="general-header">
-    <picture>
-        <source srcset="assets/FULLMETAL-ALCHEMIST-BROTHERHOOD-910px.jpg"
-             class="cover"
-        media="(max-width: 910px)">
 
-        <img src="assets/FULLMETAL ALCHEMIST BROTHERHOOD 1366px.jpg" 
-             class="background">
-    </picture>
+    <div class="general-header">
+        <picture >
+            <source srcset="assets/FULLMETAL-ALCHEMIST-BROTHERHOOD-910px.jpg"
+                    class="cover"
+                    media="(max-width: 910px)">
 
-
-    <header class="header-menu">
-        <section class="menu">
-            <picture>
-                <a routerLink="['/']">
-                    <img src="assets/logo.png" 
-                         class="logo">
-                </a>
-            </picture>
-            <div class="menu-nav">
-                <ul>
-                    <li routerLink="/ranking">Anime Ranking</li>
-                    <li>Seasonal Anime</li>
-                    <li>Discord</li>
-                    <li routerLink="/adicionar">Adicionar Anime</li>
-                </ul>
-            </div>
-
-            <aside class="sign">
-                    <mat-form-field class="mat-field">
-                        <mat-label>Buscar</mat-label>
-                        <input matInput class="search" type="text" autocomplete="off">
-
-                    </mat-form-field>
-                    <div>
-                        <a (click)="openDialogSignIn()">Login</a>
-                        <!-- <a  (click)="openDialogSignUp()">Sign Up</a> -->
-                    </div>
-            </aside>
-        </section>
-    </header>
-    <span class="anime-name">
-        <a>CODE GEASS - HANGYAKY NO LELOUCH </a>
-    </span>
+            <img src="assets/FULLMETAL ALCHEMIST BROTHERHOOD 1366px.jpg"
+                 class="cover">
+        </picture>
 
 
-</div>
+        <header class="header-menu">
+
+            <section class="menu">
+                <picture>
+                    <a routerLink="['/']">
+                        <img src="assets/logo.png" 
+                            class="logo">
+                    </a>
+                </picture>
+                
+                    <span (click)="open($event)" class="material-icons menu-sidenav">
+                        view_headline
+                    </span>
+
+
+
+                <div class="menu-nav">
+                
+                    <ul>
+                        <li *ngFor="let m of menu">
+                            <span routerLink="{{m.path}}">{{m.label}}</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <aside class="sign">
+                        <mat-form-field class="mat-field">
+                            <mat-label>Buscar</mat-label>
+                            <input matInput class="search" type="text" autocomplete="off">
+
+                        </mat-form-field>
+                        <div>
+                            <a (click)="openDialogSignIn()">Login</a>
+                        </div>
+                </aside>
+            </section>
+        </header>
+        <span class="anime-name">
+            <a>fullmetal alchemist: brotherhood </a>
+        </span>
+
+
+    </div>
+
+
 
 <!-- style="background-image:url('{{background}}');" -->
