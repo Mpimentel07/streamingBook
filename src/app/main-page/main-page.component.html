@@ -1,20 +1,21 @@
 <mat-sidenav-container class="mat-sidenav-container">
-        <mat-sidenav    #sidenav="matSidenav"
-                        class="mat-sidenav" 
-                        mode="over">
-                <ul>
-                    <li *ngFor="let m of menu" class=".sidenav-menu">
-                        <span routerLink="{{m.path}}">{{m.label}}</span>
+        <mat-sidenav #sidenav="matSidenav"
+                class="mat-sidenav" 
+                mode="over">
+                <ul class="sidenav-menu">
+                    <li *ngFor="let option of menu" routerLink="{{option.path}}">
+                            {{option.label}}
                     </li>
                 </ul>
         </mat-sidenav>
+        <mat-divider></mat-divider>
         <mat-sidenav-content class="mat-sidenav-content mat-elevation-z4">
-                          <div class="body">
-                                  <SBK-main-page-header></SBK-main-page-header>
-                                  <SBK-anime-cards></SBK-anime-cards>
-                                  <SBK-footer></SBK-footer>
-                          </div>
-          </mat-sidenav-content>
+                <div class="body">
+                        <SBK-main-page-header></SBK-main-page-header>
+                        <SBK-anime-cards></SBK-anime-cards>
+                        <SBK-footer></SBK-footer>
+                </div>
+        </mat-sidenav-content>
   </mat-sidenav-container>
   
 

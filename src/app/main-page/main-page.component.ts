@@ -20,10 +20,9 @@ export class MainPageComponent implements OnInit {
   ) { }
 
   afterViewInit(){
-    this.observer.observe(['{min-width: 781px}'])
+    this.observer.observe(['{max-width: 781px}'])
                   .subscribe((res)=>{
                     if(res.matches){
-                      this.sidenav.mode="over"
                       this.sidenav.close()
                     }
                     // else{
@@ -32,10 +31,9 @@ export class MainPageComponent implements OnInit {
                   })
   }
 
-  ngOnInit(): void {
-
-    
-    }
+    ngOnInit(): void {
+      this.createMenu();
+  }
 
     menu: any[]
 
@@ -51,11 +49,9 @@ export class MainPageComponent implements OnInit {
 
     @ViewChild('sidenav') sidenav: MatSidenav;
 
-    clicked = false
 
     open($event){
       if($event){
-        this.clicked = true
         this.sidenav.open()
       } 
     }
@@ -63,7 +59,6 @@ export class MainPageComponent implements OnInit {
 
     close() {
     this.sidenav.close();
-    // this.clicked=false
     }
   
 

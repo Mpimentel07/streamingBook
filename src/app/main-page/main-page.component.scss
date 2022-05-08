@@ -1,30 +1,23 @@
 
-.body{
-    position: relative;
-    background-color: lightgray;
-    box-sizing: border-box;
-    text-transform: uppercase;
-
-}
-
 .mat-sidenav-container{
+    padding: 0;
+    margin: 0;
+    // overflow-x: hidden;
     box-sizing: border-box;
-    width: 100vw;
+    // width: 100vw;
 
 }
-
 
 .mat-sidenav{
     width: 50vw;
     max-width: 300px;
-    // padding: 5%;
     background-color: #66b360;
     color: white;
-  }
-
-.mat-sidenav-content{
-    height: 100vh;
 }
+
+// .mat-sidenav-content{
+//     height: 100vh; AQUI TAVA O ERRO
+// }
 
 .sidenav-menu{
     list-style: none;
@@ -32,22 +25,29 @@
     color: white;
     display: flex;
     flex-flow: column;
-    align-items: center;
 }
 
-// .sidenav-menu li{
-//     width: 100%;
-//     padding: 10% 0;
-//     cursor: pointer;
-// }
-
-// li > span{
-//     padding-left: 5%;
-// }
+.sidenav-menu li{
+    width: 100%;
+    padding: 10% 20%;
+    cursor: pointer;
+}
 
 .sidenav-menu li:hover{
     background-color: #368b30;
 }
+
+.mat-sidenav-content{
+    overflow-x: hidden;
+}
+
+.body{
+    position: relative;
+    background-color: lightgray;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
 
 
 
