@@ -1,31 +1,6 @@
-import {Component} from '@angular/core';
-
-export interface tableElements {
-  rank: number
-  title: string;
-  aired: string
-  score: number;
-  status: string;
-  path: string
-}
-
-const ELEMENT_DATA: tableElements[] = [
-  {rank: 1, title: 'fullmetal alchemist: brotherhood', aired:'', score: 9.14, status: '', path:'assets/profile/fullmetal-brotherhood.jpg'},
-  {rank: 2, title: 'spy x family', aired:'', score: 9.09, status: '',path:'assets/profile/spyxfamily.jpg'},
-  {rank: 3, title: 'shingeki no kyojin: season 3 part 2', aired:'', score: 9.08, status: '',path:'assets/profile/shingeki-season3.jpg'},
-  {rank: 4, title: 'steins;gate', aired:'', score: 9.08, status: '',path:'assets/profile/steins-gate.jpg'},
-  {rank: 5, title: 'gintama', aired:'', score: 9.08, status: '',path:'assets/profile/gintama.jpg'},
-  {rank: 6, title: 'hunter x hunter (2009)', aired:'', score: 9.05, status: '',path:'assets/profile/hunterxhunter.jpg'},
-  {rank: 7, title: 'fruits basket: the final', aired:'', score: 9.04, status: '',path:'assets/profile/fruits-basket.jpg'},
-  {rank: 8, title: 'kaguya-sama wa kokurasetai', aired:'', score: 8.98, status: '',path:'assets/profile/kaguya-sama.jpg'},
-  {rank: 9, title: '3-gatsu no lion 2nd season', aired:'', score: 8.96, status: '',path:'assets/profile/3-gatsu.jpg'},
-  {rank: 10, title: 'koe no katachi', aired:'', score: 8.96, status: '',path:'assets/profile/koe-no-katachi.jpg'},
-  {rank: 11, title: 'violet evergarden', aired:'', score: 8.95, status: '',path:'assets/profile/violet-evergarden.jpg'},
-  {rank: 12, title: 'clannad after story', aired:'', score: 8.94, status: '',path:'assets/profile/clannad.jpg'},
-  {rank: 13, title: 'code geass: hangyaku no leloudh 2nd season', aired:'',score: 8.91, status: '',path:'assets/profile/code-geass-2nd.jpg'},
-  {rank: 14, title: 'owarimonogatari 2nd season', aired:'', score: 8.90, status: '',path:'assets/profile/owarimonogatari-2nd.jpg'},
-  {rank: 15, title: 'shingeki no kyojin: final season part 2', aired:'', score: 8.88, status: '',path:'assets/profile/shingeki-part2.jpg'}];
-
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'SBK-ranking-table',
@@ -33,35 +8,60 @@ const ELEMENT_DATA: tableElements[] = [
   styleUrls: ['./ranking-table.component.scss']
 })
 
-export class RankingTableComponent {
+export class RankingTableComponent implements OnInit, AfterViewInit {
+
   displayedColumns: string[] = ['rank', 'title', 'score', 'status'];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource<tableElements>(ELEMENT_DATA);
+
+  rank: number = 0
+  ngOnInit(): void {
+  }
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 }
   
-  // table: any[]
+export interface tableElements {
+  title: string;
+  aired: string
+  episodes:string
+  score: string;
+  status: string;
+  path: string
+}
 
-  // ngOnInit(): void {
-  //   //  this.createTable();
-  // }
-
-  // displayedColumns: string[] = ['rank', 'title', 'score', 'status']
-
-  // createTable(){
-  //   this.table = [
-  //   {rank: 1, title: 'fullmetal alchemist: brotherhood', score: 9.14, status: ''},
-  //   {rank: 2, title: 'spy x family', score: 9.09, status: ''},
-  //   {rank: 3, title: 'shingeki no kyojin: season 3 part 2', score: 9.08, status: ''},
-  //   {rank: 4, title: 'steins;gate', score: 9.08, status: ''},
-  //   {rank: 5, title: 'gintama', score: 9.08, status: ''},
-  //   {rank: 6, title: 'hunter x hunter (2009)', score: 9.05, status: ''},
-  //   {rank: 7, title: 'fruits basket: the final', score: 9.04, status: ''},
-  //   {rank: 8, title: 'kaguya-sama wa kokurasetai', score: 8.98, status: ''},
-  //   {rank: 9, title: '3-gatsu no lion 2nd season', score: 8.96, status: ''},
-  //   {rank: 10, title: 'koe no katachi', score: 8.96, status: ''},
-  //   {rank: 11, title: 'violet evergarden', score: 8.95, status: ''},
-  //   {rank: 12, title: 'clannad after story', score: 8.94, status: ''},
-  //   {rank: 13, title: 'code geass: hangyaku no leloudh 2nd season', score: 8.91, status: ''},
-  //   {rank: 14, title: 'owarimonogatari 2nd season', score: 8.90, status: ''},
-  //   {rank: 15, title: 'shingeki no kyojin: final season part 2', score: 8.88, status: ''}]
-  // }
-
+const ELEMENT_DATA: tableElements[] = [
+  { title: 'fullmetal alchemist: brotherhood', aired:'Abr 2009 - Jul 2010', episodes:'64', score: '9.14', status: '', 
+    path:'assets/profile/fullmetal-brotherhood.jpg'},
+  { title: 'spy x family', aired:'Abr 2022 -', episodes:'12', score: '9.09', status: '',
+    path:'assets/profile/spyxfamily.jpg'},
+  { title: 'shingeki no kyojin: season 3 part 2', aired:'Abr 2019 - Jul 2019', episodes:'10', score: '9.08', status: '',
+    path:'assets/profile/shingeki-season3.jpg'},
+  { title: 'steins;gate', aired:'Abr 2011 - Set 2011', episodes:'24', score: '9.08', status: '',
+    path:'assets/profile/steins-gate.jpg'},
+  { title: 'gintama', aired:'Abr 2015 - Mar 2016', episodes:'51', score:' 9.08', status: '',
+    path:'assets/profile/gintama.jpg'},
+  {title: 'hunter x hunter (2009)', aired:'Out 2011 - Set 2014', episodes:'148', score: '9.05', status: '',
+    path:'assets/profile/hunterxhunter.jpg'},
+  { title: 'fruits basket: the final', aired:'Abr 2021 - Jun 2021', episodes:'13', score: '9.04', status: '',
+    path:'assets/profile/fruits-basket.jpg'},
+  {title: 'kaguya-sama wa kokurasetai', aired:'Abr 2022', episodes:'12', score:' 8.98', status: '',
+    path:'assets/profile/kaguya-sama.jpg'},
+  {title: '3-gatsu no lion 2nd season', aired:'Out 2017 - Mar 2018', episodes:'22', score: '8.96', status: '',
+    path:'assets/profile/3-gatsu.jpg'},
+  {title: 'koe no katachi', aired:'Set 2016', episodes:'1', score: '8.96', status: '',
+    path:'assets/profile/koe-no-katachi.jpg'},
+  {title: 'violet evergarden movie', aired:'Set 2020 ', episodes:'1', score: '8.95', status: '',
+    path:'assets/profile/violet-evergarden.jpg'},
+  {title: 'clannad after story', aired:'Out 2008 - Mar 2009', episodes:'24',  score: '8.94', status: '',
+    path:'assets/profile/clannad.jpg'},
+  { title: 'code geass: hangyaku no leloudh 2nd season', aired:'Abr 2008 - Set 2008', episodes:'25',score: '8.91', status: '',
+    path:'assets/profile/code-geass-2nd.jpg'},
+  {title: 'owarimonogatari 2nd season', aired:'Ago 2017 - Ago 2017', episodes:'7', score:'8.90', status: '',
+    path:'assets/profile/owarimonogatari-2nd.jpg'},
+  {title: 'shingeki no kyojin: final season part 2', aired:'Jan 2022 - Abr 2022', episodes:'12',score: '8.88', status: '',
+    path:'assets/profile/shingeki-part2.jpg'}
+  ];

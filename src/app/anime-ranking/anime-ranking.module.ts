@@ -7,6 +7,11 @@ import { RankingTableComponent } from './ranking-table/ranking-table.component';
 import { RankingToolbarComponent } from './ranking-toolbar/ranking-toolbar.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
+
 
 
 
@@ -17,8 +22,10 @@ import { MatButtonModule } from '@angular/material/button';
     AnimeRankingRoutingModule,
     RouterModule,
     MatTableModule,
-    MatButtonModule
-    
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatPaginatorModule,
   ],
   exports: [
     AnimeRankingFormComponent,

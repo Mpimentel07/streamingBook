@@ -17,7 +17,6 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import  { AuthService } from './auth.service';
-import { AnimeRankingModule } from './anime-ranking/anime-ranking.module'
 import { RouterModule } from '@angular/router'
 import { TokenInterceptor } from './token.interceptor';
 import { AddAnimeComponent } from './add-anime/add-anime.component';
@@ -56,7 +55,6 @@ import { MatDividerModule } from '@angular/material/divider';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AnimeRankingModule,
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
