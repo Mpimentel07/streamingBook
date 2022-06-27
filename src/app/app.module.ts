@@ -30,8 +30,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ExpansionPanelComponent } from './add-anime/expansion-panel/expansion-panel.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
-
-
+import { AnimeRankingModule } from './anime-ranking/anime-ranking.module';
+import { GenreMaterialChipsComponent } from './add-anime/expansion-panel/genre-material-chips/genre-material-chips.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { MatDividerModule } from '@angular/material/divider';
     SignUpComponent,
     SignInComponent,
     AddAnimeComponent,
-    ExpansionPanelComponent
+    ExpansionPanelComponent,
+    GenreMaterialChipsComponent,
+    
 
     
   ],
@@ -55,6 +59,7 @@ import { MatDividerModule } from '@angular/material/divider';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AnimeRankingModule,
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
@@ -67,11 +72,14 @@ import { MatDividerModule } from '@angular/material/divider';
     MatListModule,
     MatExpansionModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    MatChipsModule,
+    MatAutocompleteModule
   ],
   providers: [UsuarioService, 
               AuthService,
               MatDatepickerModule,
+              DatePipe,
               {
                 provide: HTTP_INTERCEPTORS,
                 useClass: TokenInterceptor,

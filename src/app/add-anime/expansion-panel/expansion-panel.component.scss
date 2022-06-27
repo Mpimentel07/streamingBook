@@ -1,16 +1,35 @@
-
-
-
-//-------------------
-
-
-.headers-align .mat-expansion-panel-header-description {
-  justify-content: space-between;
+mat-form-field{
+  padding:1%;
+}
+.div-items{
+  display: flex;
+  justify-self: center;
+}
+.anime-name{
+  width: 90%;
+}
+.sinopse-textarea{
+  padding: 1%;
+  width: 90vw;
+}
+.div-raised-button{
+  display: flex;
+  padding: 2%;
+  width: 90vw;
   align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+.div-raised-button button{
+  margin: 0 1%;
+}
+.submit{
+  background-color: #2ead23;
+  color: white;
 }
 
-.headers-align .mat-form-field + .mat-form-field {
-  margin-left: 1%;
+.back-mainpage{
+  display: flex;
+  margin: 2%;
+  justify-content: flex-end;
 }
-
-

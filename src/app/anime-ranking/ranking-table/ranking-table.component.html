@@ -12,10 +12,10 @@
       <th mat-header-cell *matHeaderCellDef> 
         Rank 
       </th>
-      <td mat-cell *matCellDef="let element"
+      <td mat-cell *matCellDef="let element; let i = index"
                                 class="td-rank">
         <div class="div-rank">
-
+          {{i+1}}
         </div> 
       </td>
     </ng-container>

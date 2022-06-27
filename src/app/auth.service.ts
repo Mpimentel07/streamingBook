@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Usuario } from './usuario';
 import { environment } from '../environments/environment';
+import { Anime } from './anime.model';
 
 
 @Injectable({
@@ -10,7 +11,8 @@ import { environment } from '../environments/environment';
 })
 export class AuthService {
 
-  apiURL: string = environment.apiBaseUrl + "/api/usuarios"
+  apiUserURL: string = environment.apiBaseUrl + "/api/usuarios"
+  apiAnimeURL: string = environment.apiBaseUrl + "/api/animes"
   tokenURL: string = environment.apiBaseUrl + environment.obterTokenUrl
   clientID: string = environment.clientId
   clientSecret: string = environment.clientSecret
@@ -19,8 +21,8 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  save(usuario: Usuario): Observable<any>{
-    return this.http.post<any>(this.apiURL, usuario )
+  save(usuario: Usuario): Observable<Usuario>{
+    return this.http.post<Usuario>(this.apiUserURL, usuario )
   }
 
   tentarLogar(username: string, password: string) : Observable<any>{
@@ -36,5 +38,18 @@ export class AuthService {
     }                           
     return this.http.post(this.tokenURL, params.toString(), {headers} )
   }
+
+  add(anime: Anime): Observable<Anime>{
+    return this.http.post<Anime>(this.apiAnimeURL, anime)
+  }
+
+  cardPhoto(anime: Anime, formData: FormData): Observable<any>{
+    return this.http.put(`${this.apiAnimeURL}/${anime.id}/cardPhoto`, formData, {responseType: 'blob'})
+  }
+
+  profilePhoto(anime: Anime, formData: FormData): Observable<any>{
+    return this.http.put(`${this.apiAnimeURL}/${anime.id}/profilePhoto`, formData, {responseType: 'blob'})
+  }
 }
+
    
