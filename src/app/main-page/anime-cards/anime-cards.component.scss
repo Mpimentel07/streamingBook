@@ -42,10 +42,7 @@
     grid-area: "card";
 }
 
-.card:hover{
-    box-shadow: 10px 10px 10px 3px black;
-    
-}
+
 
 //NOTA: UM ELEMENTO PAI RELATIVE E UM ELEMENTO FILHO ABSOLUTE, O ABSOLUTE
 //SE COMPORTARÁ DE FORMA ABSOLUTA LEVANDO EM CONTA O ELEMENTO PAI
@@ -73,6 +70,12 @@
 .mat-image, .card{
     max-width: 300px;
     min-width: 200px;
+}
+
+.card:hover{
+    transform: scale(1.05);
+
+    
 }
 
 // .mat-actions{
