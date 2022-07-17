@@ -9,14 +9,14 @@
     </div> -->
     <div class="cards-grid">
 
-        <div class="card" *ngFor="let card of cards">
+        <div class="card" *ngFor="let anime of animes">
             <!-- COLOCAR UMA ANCORA AQUI-->
             <a>
                 <mat-card class="mat-card">
                     <mat-card-header>
-                    <mat-card-title class="card-name">{{card.name}}</mat-card-title>
+                    <mat-card-title class="card-name">{{anime.name}}</mat-card-title>
                     </mat-card-header>
-                    <img mat-card-image class="mat-image" src="{{card.path}}" alt="{{card.name}}">
+                    <img mat-card-image class="mat-image" src="data:image/jpg;base64,{{anime.cardPhoto}}" alt="{{card.name}}">
 
                     <!-- <div class="mat-actions">
                         <mat-card-actions class="buttons">

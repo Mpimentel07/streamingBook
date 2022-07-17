@@ -205,17 +205,7 @@
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="div-raised-button">
-        <!-- <button mat-raised-button color="primary">
-            Foto Capa (1360 px | 560 px)
-        </button>
-        <button mat-raised-button color="primary">
-          Foto Capa (710px | 560 px)
-        </button>
-        <button mat-raised-button color="primary">Foto Perfil</button> -->
-        <!-- <button mat-raised-button 
-                color="primary">
-          Foto Card
-        </button> -->
+
         <label>Profile</label>
         <input type="file" placeholder="profile"
         (change)="uploadProfilePhoto($event, animeForm)">
@@ -223,6 +213,11 @@
         <label>Card</label>
         <input type="file"  placeholder="card"
                (change)="uploadCardPhoto($event, animeForm)">
+
+        <label>Cover</label>
+        <input type="file"  placeholder="cover"
+               (change)="uploadCoverPhoto($event, animeForm)">
+
       </div>
   
   

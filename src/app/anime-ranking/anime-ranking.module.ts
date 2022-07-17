@@ -25,7 +25,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatPaginatorModule,
+    MatPaginatorModule
   ],
   exports: [
     AnimeRankingFormComponent,

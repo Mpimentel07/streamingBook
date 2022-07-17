@@ -30,10 +30,11 @@ export class ExpansionPanelComponent implements OnInit {
   }
   
   //SELECT BOXES ARRAYS
-  studios: string [] = ['Manglobe', 'Kyoto Animation','MadHouse',
+  studios: string [] = ['Manglobe','P.A. Works' ,'Pierrot','MadHouse',
                         'Ufotable','Wit Studio','Bones',
                         'Studio Ghibili','A-1 Pictures','Wit Studio',
-                        'Sunrise','Gainax']
+                        'Sunrise','Gainax','Kyoto Animation', 'Shaft',
+                        'Studio Deen', 'Production I.G.', 'Toei Animation']
   platforms: string [] = ['TV', 'Movie']
   seasons: string [] = ['Inverno', 'Primavera', 'Verão', 'Outono']
   days: string [] = ['Domingo', 
@@ -83,8 +84,8 @@ export class ExpansionPanelComponent implements OnInit {
       episodes: [''],
       season: [''],
       platform: [''],
-      startDate: [],
-      endDate: [], 
+      startDate: [''],
+      endDate: [''], 
       broadcast_day: [''],
       hour: [''],
       duration: [''],
@@ -92,8 +93,8 @@ export class ExpansionPanelComponent implements OnInit {
       // genres: [''],
       synopsis: [''],
       cardPhoto:[''],
-      profilePhoto:['']
-      // coverPhoto:[''],
+      profilePhoto:[''],
+      coverPhoto:['']
     })
 
   }
@@ -154,6 +155,19 @@ export class ExpansionPanelComponent implements OnInit {
       this.authService.profilePhoto(anime, formData)
           .subscribe(response =>{
             console.log(anime.profilePhoto)
+          })
+    }
+  }
+
+  uploadCoverPhoto(event, anime){
+    const files = event.target.files;
+    if(files){
+      const coverPhoto = files[0]
+      const formData: FormData = new FormData();
+      formData.append("coverPhoto", coverPhoto)
+      this.authService.coverPhoto(anime, formData)
+          .subscribe(response =>{
+            console.log(anime.coverPhoto)
           })
     }
   }

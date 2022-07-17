@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { SignInComponent } from 'src/app/dialogs/sign-in/sign-in.component';
-import { SignUpComponent } from 'src/app/dialogs/sign-up/sign-up.component';
 import { MatFormField } from '@angular/material/form-field';
 import {MatSidenav} from '@angular/material/sidenav';
 import { MainPageComponent } from '../main-page.component';
