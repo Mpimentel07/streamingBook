@@ -8,7 +8,6 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { MainPageHeaderComponent } from './main-page/main-page-header/main-page-header.component';
 import { AnimeCardsComponent } from './main-page/anime-cards/anime-cards.component';
 import { FooterComponent } from './footer/footer.component';
-import  { UsuarioService } from './usuario.service'
 import { SignUpComponent } from './dialogs/sign-up/sign-up.component'
 import { SignInComponent } from './dialogs/sign-in/sign-in.component'
 import {MatDialogModule} from '@angular/material/dialog';
@@ -30,8 +29,17 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ExpansionPanelComponent } from './add-anime/expansion-panel/expansion-panel.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
-
-
+import { GenreMaterialChipsComponent } from './add-anime/expansion-panel/genre-material-chips/genre-material-chips.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { DatePipe } from '@angular/common';
+import { AnimeProfileComponent } from './anime-profile/anime-profile.component';
+import { AnimeRankingComponent } from './anime-ranking/anime-ranking.component';
+import { AnimeRankingTableComponent } from './anime-ranking/anime-ranking-table/anime-ranking-table.component';
+import { AnimeRankingMaterialTableComponent } from './anime-ranking/anime-ranking-material-table/anime-ranking-material-table.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -44,9 +52,13 @@ import { MatDividerModule } from '@angular/material/divider';
     SignUpComponent,
     SignInComponent,
     AddAnimeComponent,
-    ExpansionPanelComponent
-
-    
+    ExpansionPanelComponent,
+    GenreMaterialChipsComponent,
+    AnimeProfileComponent,
+    AnimeRankingComponent,
+    AnimeRankingTableComponent,
+    AnimeRankingMaterialTableComponent,
+    ToolbarComponent
   ],
   imports: [
     RouterModule,
@@ -67,11 +79,17 @@ import { MatDividerModule } from '@angular/material/divider';
     MatListModule,
     MatExpansionModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    MatChipsModule,
+    MatAutocompleteModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatToolbarModule
   ],
-  providers: [UsuarioService, 
+  providers: [ 
               AuthService,
               MatDatepickerModule,
+              DatePipe,
               {
                 provide: HTTP_INTERCEPTORS,
                 useClass: TokenInterceptor,

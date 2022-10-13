@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { SignInComponent } from 'src/app/dialogs/sign-in/sign-in.component';
-import { SignUpComponent } from 'src/app/dialogs/sign-up/sign-up.component';
 import { MatFormField } from '@angular/material/form-field';
 import {MatSidenav} from '@angular/material/sidenav';
 import { MainPageComponent } from '../main-page.component';
+import { AppComponent } from 'src/app/app.component';
 
 
  
@@ -16,7 +16,8 @@ import { MainPageComponent } from '../main-page.component';
 export class MainPageHeaderComponent implements OnInit {
 
   constructor(public dialog: MatDialog,
-              public mainRef: MainPageComponent) { }
+              public mainRef: MainPageComponent,
+              private AppComponent: AppComponent) { }
 
   //BUILDING MENU
   menu: any[];
@@ -25,14 +26,17 @@ export class MainPageHeaderComponent implements OnInit {
     this.createMenu();
     console.log(this.menu);
 
+    this.AppComponent.close()
     }
 
   createMenu(){
     this.menu = [
-      {label: 'anime ranking', path:'/ranking'},
-      {label: 'seasonal anime', path:''},
+      {label: 'ranking de animes', path:'/ranking'},
+      {label: 'animes da temporada', path:''},
       {label: 'discord', path:''},
-      {label: 'adicionar anime', path:'/adicionar'}
+      {label: 'adicionar anime', path:'/adicionar'},
+      {label: 'perfil', path:'/profile'}
+
     ]
   }
     //LOGIN DIALOG
@@ -45,10 +49,15 @@ export class MainPageHeaderComponent implements OnInit {
       })
     }
 
-    open($event){
+    // open($event){
 
-      this.mainRef.open($event)
+    //   this.mainRef.open($event)
+    // }
+
+    openSideMenu($event){
+      this.AppComponent.open($event)
     }
+
 
 
 

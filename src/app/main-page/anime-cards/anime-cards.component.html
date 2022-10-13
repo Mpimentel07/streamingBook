@@ -1,7 +1,7 @@
 <body class="body">
     <!-- <div class="release">
         <picture>
-
+           -- > INSERT THE RELEASE HERE < --
         </picture>
         <article>
             
@@ -9,23 +9,17 @@
     </div> -->
     <div class="cards-grid">
 
-        <div class="card" *ngFor="let card of cards">
-            <!-- COLOCAR UMA ANCORA AQUI-->
+        <div class="card" *ngFor="let anime of animes"  routerLink="/profile/{{anime.id}}" target="_blank">
+                <!-- ***COMO COLOCAR UMA ANCORA PARAR ID DO ANIME?***-->
             <a>
                 <mat-card class="mat-card">
                     <mat-card-header>
-                    <mat-card-title class="card-name">{{card.name}}</mat-card-title>
+                    <mat-card-title class="card-name">{{anime.name}}</mat-card-title>
                     </mat-card-header>
-                    <img mat-card-image class="mat-image" src="{{card.path}}" alt="{{card.name}}">
-
-                    <!-- <div class="mat-actions">
-                        <mat-card-actions class="buttons">
-                            <button mat-button>ASSISTIR</button>
-                            <button mat-button>COMPARTILHAR</button>
-                        </mat-card-actions>
-                    </div> -->
+                    <img mat-card-image class="mat-image"
+                                        src="assets/cards/{{anime.imagePath}}"
+                                        alt="{{anime.name}}">
                 </mat-card>
-
             </a>
         </div>
     </div>

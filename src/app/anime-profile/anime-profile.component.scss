@@ -1,0 +1,26 @@
+.body{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    padding: 10vh;
+}
+
+.table{
+    width: 70vw;
+    color: white;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+.image{
+    height: 50vh;
+    width: 15vw;
+}
+
+.animeData, .div-if{
+    display: flex;
+    flex-flow: column;
+}
+.animeData span{
+    padding: 0.5vh 0;
+}

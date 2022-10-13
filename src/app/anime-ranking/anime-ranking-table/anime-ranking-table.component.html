@@ -1,0 +1,38 @@
+<body class="body">
+    <table class="table">
+        <tr class="tr-header">
+            <th class="th-rank">Rank</th>
+            <th class="th-title">Título</th>
+            <th class="th-score">Nota</th>
+            <th class="th-your-score">Sua Nota</th>
+            <th class="th-status">Status</th>
+        </tr>
+        <tr *ngFor="let anime of animes; let i = index">
+            <td class="rank">{{i + 1}}</td>
+            <td class="title">
+                <img src="assets/profile/{{anime.imagePath}}" 
+                         class="image">
+                <div class="title-div">
+                    <span>{{anime.name}}</span>
+                    <span>{{anime.platform}}</span>
+                    <span>{{anime.episodes ? anime.episodes : '???'}} Episódios</span>
+                    <span>{{anime.studio}}</span>
+                    <span *ngIf="anime.endDate">Transmissão: {{anime.startDate | date: 'mediumDate'}} - 
+                                                             {{anime.endDate | date: 'mediumDate'}}</span>
+                    <span *ngIf="!anime.endDate">Transmissão: {{anime.startDate | date: 'mediumDate'}} - ???
+                    </span>
+                </div>
+    
+            </td>
+            <td class="score">{{anime.score}}</td>
+            <td class="your-score">{{anime.score}}</td>
+            <td class="status">
+                <button class="status-button" mat-raised-button> 
+                    Adicionar
+                </button>
+            </td>
+        </tr>
+        
+    </table>
+
+</body>

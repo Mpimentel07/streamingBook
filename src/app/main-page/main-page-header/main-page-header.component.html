@@ -1,44 +1,40 @@
-
+    <!--HEADER-->
     <div class="general-header">
+        <!--COVER IMAGE-->
         <picture>
-            <source srcset="assets/FULLMETAL-ALCHEMIST-BROTHERHOOD-910px.jpg"
+            <source srcset="assets/cover/FULLMETAL-ALCHEMIST-BROTHERHOOD-910px.jpg"
                     class="cover"
                     media="(max-width: 910px)">
 
-            <img src="assets/FULLMETAL ALCHEMIST BROTHERHOOD 1366px.jpg"
+            <img src="assets/cover/FULLMETAL ALCHEMIST BROTHERHOOD 1366px.jpg"
                  class="cover">
         </picture>
-
-
+        <!--MENU-->
         <header class="header-menu">
-
             <section class="menu">
+                <!--LOGO-->
                 <picture>
                     <a routerLink="['/']">
                         <img src="assets/logo.png" 
                             class="logo">
                     </a>
                 </picture>
-                
-                    <span (click)="open($event)" class="material-icons menu-sidenav-icon">
-                        view_headline
-                    </span>
-
-
-
+                <!--MENU MOBILE-->
+                <span (click)="openSideMenu($event)" class="material-icons menu-sidenav-icon">
+                    view_headline
+                </span>
+                <!--MENU OPTIONS-->
                 <div class="menu-nav">
-                
                     <ul>
                         <li *ngFor="let m of menu">
                             <span routerLink="{{m.path}}">{{m.label}}</span>
                         </li>
                     </ul>
-
                 </div>
-
-                <aside class="sign">
+                <!--LOGIN | SEARCH-->
+                <aside class="aside">
                         <mat-form-field class="mat-field">
-                            <mat-label>Buscar</mat-label>
+                            <mat-label>Search</mat-label>
                             <input matInput class="search" type="text" autocomplete="off">
 
                         </mat-form-field>
@@ -48,6 +44,7 @@
                 </aside>
             </section>
         </header>
+        <!-- ANIME NAME -->
         <span class="anime-name">
             <a>fullmetal alchemist: brotherhood </a>
         </span>
@@ -57,4 +54,3 @@
 
 
 
-<!-- style="background-image:url('{{background}}');" -->

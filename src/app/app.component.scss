@@ -1,5 +1,39 @@
 *{  
-    box-sizing: border-box;
-    background-color: lightgray;
+    // box-sizing: border-box;
+    // background-color: black;
     font-family: "Asap","Droid Sans",Verdana,Tahoma,"DejaVu Sans",sans-serif;  
 }   
+//FIXES PAGE OVERFLOW
+.mat-sidenav-content{
+    overflow-x: hidden;
+}
+//SIDENAV CONFIGS
+.mat-sidenav{
+    width: 50vw;
+    max-width: 20vw;
+    min-width: 200px;
+    background-color: #2ead23;
+    color: white;
+}
+//SIDENAV UL CONFIGS
+.sidenav-menu{
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: column;
+}
+//SIDENAV LI CONFIGS
+.sidenav-menu li{
+    padding: 10% 20%;
+    cursor: pointer;
+}
+.sidenav-menu li:hover{
+    background-color: #368b30;
+}
+//PAGE CONTENT STYLE
+.body{
+    position: relative;
+    text-transform: uppercase;
+    background-color: black;
+}
+//COR PADRÃO DO SISTEMA #2ead23

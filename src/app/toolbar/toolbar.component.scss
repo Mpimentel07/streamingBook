@@ -1,0 +1,53 @@
+.toolbar{
+    background-color: #2ead23;
+    color: white;
+    font-size: 1em;
+}
+
+.menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    width: 60vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+}
+
+.menu li{
+    list-style: none ;
+    cursor: pointer;
+}
+//SEARCH | LOGIN    
+.aside {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;//y axis
+    width: 30vw;
+}
+
+.login{
+    font-size: 1.2em;
+}
+
+.mat-field mat-label{
+    color: white;
+}
+
+.aside a:hover, .menu li:hover, .home-icon:hover{
+        // color: #8ee487;
+        text-shadow: 0.01em 0.1em 0.001em black;
+        cursor: pointer;
+}
+
+@media(max-width:500px){
+    .menu-icon{
+        display: inline;
+    }
+    .menu-items, .aside{
+        display: none;
+    }
+}
