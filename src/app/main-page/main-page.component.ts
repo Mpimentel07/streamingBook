@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Usuario } from '../usuario';
-import { UsuarioService } from '../usuario.service';
+import { Component, OnInit, ViewChild, AfterViewInit  } from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
 import { BreakpointObserver } from "@angular/cdk/layout"
 
@@ -14,22 +12,21 @@ export class MainPageComponent implements OnInit {
 
 
   constructor(
-    private usuarioService: UsuarioService,
     private observer: BreakpointObserver
 
   ) { }
 
-  afterViewInit(){
-    this.observer.observe(['{max-width: 781px}'])
-                  .subscribe((res)=>{
-                    if(res.matches){
-                      this.sidenav.close()
-                    }
-                    // else{
-                    //   this.sidenav.mode = "side"
-                    // }
-                  })
-  }
+  // ngAfterViewInit(){
+  //   this.observer.observe(['{max-width: 781px}'])
+  //                 .subscribe((res)=>{
+  //                   if(res.matches){
+  //                     this.sidenav.close()
+  //                   }
+  //                   // else{
+  //                   //   this.sidenav.mode = "side"
+  //                   // }
+  //                 })
+  // }
 
     ngOnInit(): void {
       this.createMenu();
@@ -39,27 +36,27 @@ export class MainPageComponent implements OnInit {
 
     createMenu(){
       this.menu = [
-        {label: 'anime ranking', path:'/ranking'},
-        {label: 'seasonal anime', path:''},
-        {label: 'discord', path:''},
+        {label: 'Ranking dos Animes', path:'/ranking'},
+        {label: 'Animes da Temporada', path:''},
+        {label: 'Perfil', path:'/profile'},
+        {label: 'Discord', path:''},
         {label: 'adicionar anime', path:'/adicionar'}
       ]
     }
 
 
-    @ViewChild('sidenav') sidenav: MatSidenav;
+    // @ViewChild('sidenav') sidenav: MatSidenav;
 
 
-    open($event){
-      if($event){
-        this.sidenav.open()
-      } 
-    }
+    // open($event){
+    //   if($event){
+    //     this.sidenav.open()
+    //   } 
+    // }
 
-
-    close() {
-    this.sidenav.close();
-    }
+    // close() {
+    // this.sidenav.close();
+    // }
   
 
 }

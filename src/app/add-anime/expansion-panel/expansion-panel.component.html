@@ -204,13 +204,38 @@
           <mat-icon>date_range</mat-icon>
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <div class="div-raised-button">
+
+      <div class="input-flex">
+        <mat-form-field appearance="fill" class="mat-input">
+          <mat-label>Cover Image:</mat-label>
+          <input matInput formControlName="imagePath">
+          <span matSuffix>.jpg</span>
+        </mat-form-field>
+  
+        <!-- <mat-form-field appearance="fill" class="mat-input">
+          <mat-label>Card Image:</mat-label>
+          <input matInput formControlName="cardPhoto" value="coverPhoto">
+          <span matSuffix>.jpg</span>
+
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="mat-input">
+          <mat-label>Profile Image:</mat-label>
+          <input matInput formControlName="profilePhoto" value="coverPhoto">
+          <span matSuffix>.jpg</span>
+
+        </mat-form-field> -->
+
+      </div>
+
+      <!-- <div class="div-raised-button">
 
         <label>Profile</label>
         <input type="file" placeholder="profile"
         (change)="uploadProfilePhoto($event, animeForm)">
         
         <label>Card</label>
+        {{imageError}}
         <input type="file"  placeholder="card"
                (change)="uploadCardPhoto($event, animeForm)">
 
@@ -219,7 +244,7 @@
                (change)="uploadCoverPhoto($event, animeForm)">
 
       </div>
-  
+   -->
   
       <mat-action-row>
         <button mat-button color="warn" (click)="prevStep()">Previous</button>

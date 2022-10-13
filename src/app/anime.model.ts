@@ -22,14 +22,10 @@ export class Anime {
     //FIFTH PANEL
     synopsis: string
     //------------
+    imagePath: string
     rank: number
     score: number
     //SIXTH PANEL
-    cardPhoto: any
-    coverPhoto: any
-    profilePhoto: any
-
-
     //USER STATS
     members: number
     Status: string //"Watching" "Completed" "on-hold" etc
@@ -49,9 +45,7 @@ export class Anime {
         duration: number,
         // genres: string,
         synopsis: string,
-        cardPhoto: any,
-        coverPhoto: any,
-        profilePhoto: any,
+        imagePath: string,
         rank: number,
         score: number
     ){
@@ -68,13 +62,8 @@ export class Anime {
         this.duration = duration
         // this.genres = genres,
         this.synopsis = synopsis,
-        this.cardPhoto = cardPhoto,
-        this.coverPhoto = coverPhoto,
-        this.profilePhoto = profilePhoto,
+        this.imagePath = imagePath,
         this.rank = rank,
         this.score = score
     }
-
-
-
 }

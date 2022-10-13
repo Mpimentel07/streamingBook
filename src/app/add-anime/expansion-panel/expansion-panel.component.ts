@@ -3,6 +3,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { Anime } from '../../anime.model'
 import { AuthService } from '../..//auth.service';
 import { DatePipe, formatDate } from '@angular/common';
+import * as _ from 'lodash';
 
 
 
@@ -34,7 +35,8 @@ export class ExpansionPanelComponent implements OnInit {
                         'Ufotable','Wit Studio','Bones',
                         'Studio Ghibili','A-1 Pictures','Wit Studio',
                         'Sunrise','Gainax','Kyoto Animation', 'Shaft',
-                        'Studio Deen', 'Production I.G.', 'Toei Animation']
+                        'Studio Deen', 'Production I.G.', 'Toei Animation',
+                        'AIC']
   platforms: string [] = ['TV', 'Movie']
   seasons: string [] = ['Inverno', 'Primavera', 'Verão', 'Outono']
   days: string [] = ['Domingo', 
@@ -89,12 +91,13 @@ export class ExpansionPanelComponent implements OnInit {
       broadcast_day: [''],
       hour: [''],
       duration: [''],
-      score:[''],
       // genres: [''],
       synopsis: [''],
-      cardPhoto:[''],
-      profilePhoto:[''],
-      coverPhoto:['']
+      imagePath: [''],
+      score:['']
+      // cardPhoto:[''],
+      // profilePhoto:[''],
+      // coverPhoto:['']
     })
 
   }
@@ -115,9 +118,10 @@ export class ExpansionPanelComponent implements OnInit {
       formValues.duration,
       // formValues.genres,
       formValues.synopsis,
-      formValues.cardPhoto,
-      formValues.coverPhoto,
-      formValues.profilePhoto,
+      formValues.imagePath + '.jpg',
+      // formValues.coverPhoto + '.jpg',
+      // formValues.cardPhoto = formValues.coverPhoto + '.jpg',
+      // formValues.profilePhoto = formValues.coverPhoto + '.jpg',
       formValues.rank,
       formValues.score
     )
@@ -132,45 +136,46 @@ export class ExpansionPanelComponent implements OnInit {
     
   }
 
-  uploadCardPhoto(event, anime){
-    const files = event.target.files;
-    if(files){
-      const cardPhoto = files[0]
-      const formData: FormData = new FormData();
-      formData.append("cardPhoto", cardPhoto)
-      this.authService.cardPhoto(anime, formData)
-          .subscribe(response =>{
-            console.log(anime.cardPhoto)
-          })
-    }
-  }
+
+  // uploadCardPhoto(event, anime){
+  //   const files = event.target.files;
+  //   if(files){
+  //     const cardPhoto = files[0]
+  //     const formData: FormData = new FormData();
+  //     formData.append("cardPhoto", cardPhoto)
+  //     this.authService.cardPhoto(anime, formData)
+  //         .subscribe(response =>{
+  //           console.log(anime.cardPhoto)
+  //         })
+  //   }
+  // }
 
   
-  uploadProfilePhoto(event, anime){
-    const files = event.target.files;
-    if(files){
-      const profilePhoto = files[0]
-      const formData: FormData = new FormData();
-      formData.append("profilePhoto", profilePhoto)
-      this.authService.profilePhoto(anime, formData)
-          .subscribe(response =>{
-            console.log(anime.profilePhoto)
-          })
-    }
-  }
+  // uploadProfilePhoto(event, anime){
+  //   const files = event.target.files;
+  //   if(files){
+  //     const profilePhoto = files[0]
+  //     const formData: FormData = new FormData();
+  //     formData.append("profilePhoto", profilePhoto)
+  //     this.authService.profilePhoto(anime, formData)
+  //         .subscribe(response =>{
+  //           console.log(anime.profilePhoto)
+  //         })
+  //   }
+  // }
 
-  uploadCoverPhoto(event, anime){
-    const files = event.target.files;
-    if(files){
-      const coverPhoto = files[0]
-      const formData: FormData = new FormData();
-      formData.append("coverPhoto", coverPhoto)
-      this.authService.coverPhoto(anime, formData)
-          .subscribe(response =>{
-            console.log(anime.coverPhoto)
-          })
-    }
-  }
+  // uploadCoverPhoto(event, anime){
+  //   const files = event.target.files;
+  //   if(files){
+  //     const coverPhoto = files[0]
+  //     const formData: FormData = new FormData();
+  //     formData.append("coverPhoto", coverPhoto)
+  //     this.authService.coverPhoto(anime, formData)
+  //         .subscribe(response =>{
+  //           console.log(anime.coverPhoto)
+  //         })
+  //   }
+  // }
 
 }
 

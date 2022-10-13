@@ -44,8 +44,12 @@ export class AuthService {
   }
 
   list(): Observable<Anime[]>{
-   return this.http.get<any>(this.apiAnimeURL)
+   return this.http.get<Anime[]>(this.apiAnimeURL)
   }
+
+  // getProfile(anime: Anime): Observable<Anime>{
+  //   return this.http.get<Anime>(`${this.apiAnimeURL}/${anime.id}`)
+  // }
 
   cardPhoto(anime: Anime, formData: FormData): Observable<any>{
     return this.http.put(`${this.apiAnimeURL}/${anime.id}/cardPhoto`, formData, {responseType: 'blob'})
@@ -58,6 +62,7 @@ export class AuthService {
   coverPhoto(anime: Anime, formData: FormData): Observable<any>{
     return this.http.put(`${this.apiAnimeURL}/${anime.id}/coverPhoto`, formData, {responseType: 'blob'})
   }
+
 }
 
    

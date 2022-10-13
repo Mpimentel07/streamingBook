@@ -4,102 +4,76 @@
 //CONFIGS DO HEADER 
 .general-header {
     position: relative;
-    width: 100vw;
     font-weight: 900;
 }
-
 //CONFIGS DO BACKGROUND DO HEADER
 .cover {
     width: 100vw;
-    // z-index: -1;
-    // background-size: cover;
 }
-
+//MENU CONFIGS
 .header-menu{
-    //DIV SETTINGS
     position: absolute;
-
+    // background-image: linear-gradient(rgb(253, 188, 67), transparent);
     top: 0;
-    background-image: linear-gradient(#66b360, transparent);
-
     width: 100vw;
     padding: 0 5%;
-
     //FONT SETTINGS
     color: #FFF;
     text-shadow: #444 1px 1px 0;
-
 }
 .logo{
     width: 5vw;
 }
-
-/*CSS FOR PAGE HEADER*/
+//GENERAL MENU
 .menu {
     display: flex;
     flex-flow: row;
     align-items: center; // y axis
 }
-
+//LINKS MENU
 .menu-nav{
-    width: 60vw;
+    width: 70vw;
 }
-
 .menu ul{
     display: flex;
-    justify-content: flex-start;
     list-style: none;
 }
-
 .menu li{
     padding-right: 5%;
 } 
-
+//ICON
 .menu-sidenav-icon{
     display: none;
     font-size: 3em;
 }
-    
+//SEARCH | LOGIN    
 .aside {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center;//y axis
     width: 30vw;
 }
-
 .mat-field mat-label{
     color: white;
 }
-
- 
 .aside a:hover, .menu li:hover{
         color: #8ee487;
         text-shadow: 0.01em 0.1em 0.001em black;
 }
-
-
-
+//ANIME NAME
 .anime-name{
     position: absolute;
-
     padding:1%;  
- 
     bottom: 0;
     right: 10vw;
-
-    color: black;
     text-align: center;
-    
-    background-color: lightgray;
+    background-color: black;
+    color: white;
 }
-
 .anime-name:hover{
     text-decoration: underline;
 }
-
-//SIDENAV
-
-
+//POINTER
 .logo, .menu ul, .aside a, .anime-name, .menu-sidenav-icon {
     cursor: pointer;
 }
@@ -109,16 +83,30 @@
     .mat-field{
         display: none;
     }
+    .anime-name{
+        right: 5vw;
+    }
 }
 
 @media(max-width: 780px){
+    .menu-nav   {
+        width: 50vw;
+    }
     .menu-nav, .logo{
         visibility: hidden;
     }
     .menu-sidenav-icon{
         display: block;
     }
+    .anime-name{
+        right: 0;
+    }
+}
 
+@media(max-width: 300px){
+    .anime-name{
+        display: none;
+    }
 }
 
 

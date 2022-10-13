@@ -1,7 +1,7 @@
 <div class="footer">
     <ol >
-        <li *ngFor="let anime of topAnime">
-            {{anime}}
+        <li *ngFor="let anime of animes | slice:0:5">
+            {{anime.name}}
         </li>
     </ol>
 </div>

@@ -1,0 +1,52 @@
+<SBK-toolbar></SBK-toolbar>
+<body class="body">
+    <table class="table" >
+        <!-- <tr>
+            <th>{{anime.name}}</th>
+        </tr> -->
+        <tbody class="tbody" *ngFor="let anime of animes | slice:0:1">
+            <tr>
+                <td>
+                    <div class="image">
+                        <picture>
+                            <img src="assets/profile/{{anime.imagePath}}" 
+                                 alt="Profile"
+                                 class="image">
+                        </picture>
+
+                    </div>
+                </td>
+                <td>
+                    <img scr="assets/cards/{{anime.imagePath}}"
+                         alt="screen"
+                         width="500px"
+                         height="300px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="animeData">
+                        <span>{{anime.platform}}</span>
+                        <span>{{anime.episodes ? anime.episodes : '???'}} episódios</span>
+
+                        <div *ngIf="anime.endDate" class="div-if">
+                            <span>Status: Completo</span>
+                            <span>Lançamento: {{anime.startDate | date:'mediumDate'}} - 
+                                              {{anime.endDate | date:'mediumDate'}}</span>
+                        </div>
+                        <div *ngIf="!anime.endDate">
+                            <span>Status: Em Andamento</span>
+                            <span>Lançamento: {{anime.startDate | date:'mediumDate'}}- ???</span>
+                        </div>
+                        <span>Temporada: {{anime.season}}</span>
+                        <span>Dia: {{anime.broadcast_day}} </span>
+                        <span>Horário: {{anime.hour ? anime.hour : 'Desconhecido'}}</span>
+                        <span>Studio: {{anime.studio}}</span>
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+<SBK-footer></SBK-footer>

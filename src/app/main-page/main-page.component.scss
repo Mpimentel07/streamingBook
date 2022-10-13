@@ -1,55 +1,39 @@
-
-.mat-sidenav-container{
-    padding: 0;
-    margin: 0;
-    // overflow-x: hidden;
-    box-sizing: border-box;
-    // width: 100vw;
-
-}
-
-.mat-sidenav{
-    width: 50vw;
-    max-width: 300px;
-    background-color: #66b360;
-    color: white;
-}
-
-// .mat-sidenav-content{
-//     height: 100vh; AQUI TAVA O ERRO
-// }
-
-.sidenav-menu{
-    list-style: none;
-    text-transform: uppercase;
-    color: white;
-    display: flex;
-    flex-flow: column;
-}
-
-.sidenav-menu li{
-    width: 100%;
-    padding: 10% 20%;
-    cursor: pointer;
-}
-
-.sidenav-menu li:hover{
-    background-color: #368b30;
-}
-
+//FIXES PAGE OVERFLOW
 .mat-sidenav-content{
     overflow-x: hidden;
 }
-
+//SIDENAV CONFIGS
+.mat-sidenav{
+    width: 50vw;
+    max-width: 20vw;
+    min-width: 200px;
+    background-color: #2ead23;
+    color: white;
+}
+//SIDENAV UL CONFIGS
+.sidenav-menu{
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: column;
+}
+//SIDENAV LI CONFIGS
+.sidenav-menu li{
+    padding: 10% 20%;
+    cursor: pointer;
+}
+.sidenav-menu li:hover{
+    background-color: #368b30;
+}
+//PAGE CONTENT STYLE
 .body{
     position: relative;
-    background-color: lightgray;
-    box-sizing: border-box;
     text-transform: uppercase;
+    background-color: black;
 }
+//CHECK 12/10/2022
 
-
-
+//#2ead23
 
 
 

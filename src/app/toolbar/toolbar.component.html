@@ -1,0 +1,31 @@
+<mat-toolbar class="toolbar">
+
+  <span (click)="open($event)"
+        class="material-icons menu-icon">
+    menu
+  </span>
+
+  <div class="menu-items">
+     <ul class="menu">
+      <span class="material-icons home-icon" routerLink="/">
+        home
+      </span>
+       <li *ngFor="let item of menu"
+            routerLink="{{item.path}}">
+           {{item.label}}
+       </li>
+     </ul>
+  </div>
+
+  <aside class="aside">
+    <mat-form-field class="mat-field">
+        <mat-label>Search</mat-label>
+        <input matInput class="search" type="text" autocomplete="off">
+
+    </mat-form-field>
+    <div>
+        <a class="login">Login</a>
+    </div>
+  </aside>
+
+</mat-toolbar>

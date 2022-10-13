@@ -1,0 +1,131 @@
+.body{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    padding: 10vh 0;
+    background-color: black;
+}
+.table{
+    width: 70vw;
+    min-width: 200px;
+    box-sizing: border-box;
+    height: fit-content;
+    color: black;  
+    font-family: "Asap", "Droid Sans", Verdana, Tahoma, "DejaVu Sans", sans-serif;  
+    background-color: black;
+}
+table tr:nth-child(1){
+    height: 50px;
+    font-size: 1.5em;
+}
+tr td:nth-child(1){
+    width: 10vw;
+}
+// 
+// .tr-header{
+//     padding: 10px 10px;
+// }
+.table th {
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+}
+.table td {
+    height: fit-content;
+}
+//ZEBRA TABLE
+tr:nth-child(odd){
+    background-color: #2ead23;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: white;
+}
+//COLUMN WIDTH
+
+.th-score, .th-your-score, .th-status{
+    width: 7.5vw;
+}
+//------------------------------------//
+.rank{
+    font-size: 2em;
+    // color:#2ead23;
+}
+.title{
+    display: flex;
+}
+.image{
+    min-width: 4vw;
+    height: 105px;
+    width: 75px;
+    margin: 0 0.5vw 0 0;
+}
+.title-div{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 0.3vh 0;
+}
+.title-div span:nth-child(1){
+    // color: #2ead23;
+    color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.title-div span:nth-child(3){
+    font-style: italic  ;
+}
+.status{
+    padding: 0.5vw;
+}
+.status-button{
+    // background-color:#2ead23;
+    color:black;
+    font-size: 0.9em;
+    padding: 0 2vw ;
+    line-height: 30px;
+}
+.score, .your-score, .rank, .td-status{
+    text-align: center;
+    font-weight: bold;
+}
+
+.td-status, .score{
+    width: 8vw;
+}
+//POINTER
+.image:hover, .title-div span:nth-child(1):hover{
+    cursor: pointer;
+}
+//BROWSER SETTINGS AND WIDE PHONE SCREENS
+@media(max-width: 500px){
+    .th-rank, .th-score, .th-your-score, .th-status{
+        width: 12vw;
+    }
+    .table{
+        width: 100vw;
+    }
+    .title-div span{
+        display: none;
+    }
+    .image{
+        height: 292px;
+        width: 100%;
+    }
+}
+
+
+//CONFIGS PARA TABLE DO MATERIAL
+// th.mat-header-cell:first-of-type{
+//     padding: 12px;
+// }
+
+// td.mat-cell:first-of-type{
+//     padding: 0;
+// }
+
+// th.mat-header-cell{
+//     text-align: center;
+// }

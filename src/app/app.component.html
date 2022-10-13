@@ -1,4 +1,22 @@
-<body class="body">
-        <router-outlet></router-outlet>
-        <!-- <SBK-footer></SBK-footer> -->
-</body>
+
+<mat-sidenav-container class="mat-sidenav-container">
+        <script>
+        
+        </script>
+        <mat-sidenav #sidenav="matSidenav"
+                class="mat-sidenav" 
+                mode="over">
+                <ul class="sidenav-menu">
+                    <li *ngFor="let option of menu" routerLink="{{option.path}}">
+                            {{option.label}}
+                        </li>
+                </ul>
+                <mat-divider></mat-divider>
+        </mat-sidenav>
+        <mat-sidenav-content class="mat-sidenav-content mat-elevation-z4">
+                <div class="body">
+                        <router-outlet></router-outlet>
+                </div>
+        </mat-sidenav-content>
+  </mat-sidenav-container>
+  
