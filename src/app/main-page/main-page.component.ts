@@ -42,6 +42,8 @@ export class MainPageComponent implements OnInit {
         {label: 'Discord', path:''},
         {label: 'adicionar anime', path:'/adicionar'}
       ]
+
+      
     }
 
 

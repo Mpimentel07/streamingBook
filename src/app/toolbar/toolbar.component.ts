@@ -3,6 +3,7 @@ import { SignInComponent } from '../dialogs/sign-in/sign-in.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
 import { AppComponent } from '../app.component';
+import { MainPageComponent } from '../main-page/main-page.component';
 
 @Component({
   selector: 'SBK-toolbar',
@@ -11,7 +12,9 @@ import { AppComponent } from '../app.component';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor(private AppComponent: AppComponent) { }
+  constructor(private AppComponent: AppComponent,
+              public dialog: MatDialog,
+              ) { }
   menu: any[]
   ngOnInit(): void {
     this.menu = [
@@ -20,7 +23,6 @@ export class ToolbarComponent implements OnInit {
       {label: 'perfil', path:'/profile'},
       {label: 'discord', path:''},
       {label: 'adicionar anime', path:'/adicionar'}
-  
     ]
 
     this.AppComponent.close()
@@ -32,6 +34,15 @@ export class ToolbarComponent implements OnInit {
     if($event){
       this.AppComponent.open($event)
     }
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(SignInComponent,{
+
+    })
+    dialogRef.afterClosed().subscribe(result=>{
+
+    })
   }
 
 
