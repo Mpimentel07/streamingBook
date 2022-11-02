@@ -25,9 +25,7 @@ export class AppComponent {
     ]
   }
 
-
   @ViewChild('sidenav') sidenav: MatSidenav;
-
 
   open($event){
     if($event){
@@ -38,8 +36,6 @@ export class AppComponent {
   close(){
     this.sidenav.close()
   }
-
-
 }
 
 

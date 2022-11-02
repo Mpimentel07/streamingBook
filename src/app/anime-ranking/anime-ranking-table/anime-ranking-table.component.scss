@@ -36,11 +36,10 @@ tr td:nth-child(1){
 //ZEBRA TABLE
 tr:nth-child(odd){
     background-color: #2ead23;
-    color: white;
 }
 
 tr:nth-child(even){
-    background-color: white;
+    background-color: #46db38;
 }
 //COLUMN WIDTH
 
@@ -69,7 +68,7 @@ tr:nth-child(even){
 }
 .title-div span:nth-child(1){
     // color: #2ead23;
-    color: black;
+    // color: white;
     font-weight: bold;
     font-size: 1.3em;
 }
